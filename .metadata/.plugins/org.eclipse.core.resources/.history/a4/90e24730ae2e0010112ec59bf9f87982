@@ -1,0 +1,23 @@
+#include <SFML/Graphics.hpp>
+int main(int argc, char **argv) {
+	sf::RenderWindow renderWindow(sf::VideoMode(640, 240), "Hello cruelWorld");
+	sf::Font font; // Cria a font e lê do arquivo.
+	font.loadFromFile("x-files.ttf")
+		sf::Text text("Hello World", font, 96);//texto com a fonte e tamanho 96
+	text.setColor(sf::Color::Red); //Define o texto na cor vermelho.
+	//Pega as dimensoes do objeto de texto e o usa para centralizar na janela.
+	//posicionamento relativo a esquerda superior. Mudado por setOritin()
+	sf::FloatRect bounds(text.getLocalBounds());
+	text.setPosition(renderWindow.getSize().x / 2 - (bounds.left + bounds.width / 2),
+	renderWindow.getSize().y / 2 - (bounds.top + bounds.height / 2));
+	while (renderWindow.isOpen()) {
+		sf::Event event;
+			while (renderWindow.pollEvent(event)) {
+				if (event.type == sf::Event::EventType::Closed)
+					renderWindow.close();
+			}
+			renderWindow.clear(sf::Color::White);
+			renderWindow.draw(text); //Desenha seu texto na janela.
+			renderWindow.display();
+}
+

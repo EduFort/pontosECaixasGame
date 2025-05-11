@@ -1,0 +1,127 @@
+#include <SFML/Graphics.hpp>
+#include <iostream>
+#include <iostream>
+#include <ctime>
+
+int main()
+
+{
+	std::srand(time(NULL));
+    // Cria a janela
+
+    sf::RenderWindow window(sf::VideoMode(400, 300), "Bola Branca - SFML");
+
+
+
+    // Cria a "bola" (um círculo)
+
+    //Bola Branca
+    sf::CircleShape circleWhite(30.0f); // raio de 50 pixels
+
+    circleWhite.setFillColor(sf::Color::White);
+    int xWhite = std::rand()%(340-31) + 30;
+    int yWhite = std::rand()%(240-31) + 30;
+
+    circleWhite.setPosition(xWhite, yWhite); // centraliza aproximadamente (janela 400x300)
+
+    //Bola Azul
+    sf::CircleShape circleBlue(30.0f); // raio de 50 pixels
+
+    circleWhite.setFillColor(sf::Color::Blue);
+    int xBlue = std::rand()%(340-31) + 30;
+    int yBlue = std::rand()%(240-31) + 30;
+
+    circleBlue.setPosition(xBlue, yBlue);
+
+
+    // Loop principal
+    sf::Clock fpsClock;
+    window.setFramerateLimit(100);
+    bool touchBordXWhite=0;
+    bool touchBordYWhite=0;
+    bool touchBordXBlue=0;
+    bool touchBordYBlue=0;
+    bool touchBordXYellow=0;
+    bool touchBordYYellow=0;
+
+    while (window.isOpen())
+
+    {
+
+    	float currentTime = fpsClock.restart().asSeconds();
+    	float fps = 1.0f / (currentTime);
+
+    	std::cout << "fps: "<< fps << std::endl;
+
+        sf::Event event;
+
+        while (window.pollEvent(event))
+
+        {
+
+            if (event.type == sf::Event::Closed)
+
+                window.close();
+
+        }
+
+//Bola branca
+        if(xWhite==340){
+        	touchBordXWhite=1;
+        }
+        if(xWhite==0){
+        	touchBordXWhite=0;
+        }
+        if(yWhite==240){
+        	touchBordYWhite=1;
+         }
+        if(yWhite==0){
+        	 touchBordYWhite=0;
+         }
+
+
+        if(touchBordXWhite==0 && touchBordYWhite==0)
+        	circleWhite.setPosition(xWhite++, yWhite++);
+        if(touchBordXWhite==1 && touchBordYWhite==0)
+        	circleWhite.setPosition(xWhite--, yWhite++);
+        if(touchBordXWhite==0 && touchBordYWhite==1)
+        	circleWhite.setPosition(xWhite++, yWhite--);
+        if(touchBordXWhite==1 && touchBordYWhite==1)
+        	circleWhite.setPosition(xWhite--, yWhite--);
+
+//Bola azul
+        if(xBlue==340){
+        	touchBordXBlue=1;
+        }
+        if(xBlue==0){
+        	touchBordXBlue=0;
+        }
+        if(yBlue==240){
+        	touchBordYBlue=1;
+         }
+        if(yBlue==0){
+        	 touchBordYBlue=0;
+         }
+
+
+        if(touchBordXBlue==0 && touchBordYBlue==0)
+        	circleWhite.setPosition(xBlue++, yBlue++);
+        if(touchBordXBlue==1 && touchBordYBlue==0)
+        	circleWhite.setPosition(xBlue--, yBlue++);
+        if(touchBordXBlue==0 && touchBordYBlue==1)
+        	circleWhite.setPosition(xBlue++, yBlue--);
+        if(touchBordXBlue==1 && touchBordYBlue==1)
+        	circleWhite.setPosition(xBlue--, yBlue--);
+
+        window.clear(sf::Color::Black); // fundo preto
+
+        window.draw(circleWhite);
+
+        window.display();
+
+    }
+
+
+
+    return 0;
+}

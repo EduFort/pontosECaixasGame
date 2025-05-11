@@ -1,0 +1,7 @@
+19:34:09 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+
+19:34:10 Build Finished. 0 errors, 0 warnings. (took 748ms)
+

@@ -1,0 +1,730 @@
+21:16:39 **** Rebuild of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o start.exe main.o 
+Info: Nothing to build for start
+21:22:19 **** Clean-only build of configuration Debug for project start ****
+rm -rf main.d start.exe main.o 
+21:22:19 **** Rebuild of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+Info: Nothing to build for start
+21:27:33 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+21:28:00 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+21:44:48 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:2:19: fatal error: iostram: No such file or directory
+ #include <iostram>
+                   ^
+compilation terminated.
+21:45:01 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+C:\MinGW32\bin/ld.exe: cannot open output file start.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:47:36 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:51:58 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:52:52 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:53:09 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:53:37 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:53:53 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:57:41 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:57:54 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:58:13 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:58:22 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+21:59:25 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:47:35: error: expected primary-expression before ')' token
+         circle.setPosition(x++, y+);
+                                   ^
+21:59:37 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:59:52 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:09:01 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:18:38: warning: unused variable 'yStart' [-Wunused-variable]
+     int xStart = 150, xUpdate = 150, yStart = 100, yUpdate = 100;
+                                      ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:09:59 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:13:00 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:47:37: warning: operation on 'x' may be undefined [-Wsequence-point]
+         circle.setPosition(x++, x++);
+                                     ^
+..\main.cpp:49:38: warning: operation on 'x' may be undefined [-Wsequence-point]
+          circle.setPosition(x++, x++);
+                                      ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+22:14:42 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:49:46: warning: operation on 'x' may be undefined [-Wsequence-point]
+                  circle.setPosition(x++, x++);
+                                              ^
+..\main.cpp: At global scope:
+..\main.cpp:68:5: error: expected unqualified-id before 'return'
+     return 0;
+     ^
+..\main.cpp:70:1: error: expected declaration before '}' token
+ }
+ ^
+22:14:51 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:49:46: warning: operation on 'x' may be undefined [-Wsequence-point]
+                  circle.setPosition(x++, x++);
+                                              ^
+..\main.cpp: At global scope:
+..\main.cpp:68:5: error: expected unqualified-id before 'return'
+     return 0;
+     ^
+..\main.cpp:70:1: error: expected declaration before '}' token
+ }
+ ^
+22:16:11 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:48:38: warning: operation on 'x' may be undefined [-Wsequence-point]
+          circle.setPosition(x++, x++);
+                                      ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:16:30 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:48:38: warning: operation on 'x' may be undefined [-Wsequence-point]
+          circle.setPosition(x++, x++);
+                                      ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:17:10 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:48:38: warning: operation on 'x' may be undefined [-Wsequence-point]
+          circle.setPosition(x--, x++);
+                                      ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:17:23 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+C:\MinGW32\bin/ld.exe: cannot open output file start.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:17:35 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:17:59 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:18:42 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:19:16 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:20:00 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+22:20:32 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+22:21:27 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:33:46 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:38:09 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:39:27 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:40:42 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:31:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:41:29 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:31:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:41:56 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:32:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:42:48 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:32:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:54:06 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:11:1: error: expected declaration before '}' token
+ }
+ ^
+19:54:23 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:11:1: error: expected declaration before '}' token
+ }
+ ^
+19:54:35 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:42:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:57:11 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:40:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+20:01:43 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int modeWalk(bool, int)':
+..\main.cpp:6:12: warning: second operand of conditional expression has no effect [-Wunused-value]
+  Bool?coord+1:coord-1;
+            ^
+..\main.cpp:6:20: warning: third operand of conditional expression has no effect [-Wunused-value]
+  Bool?coord+1:coord-1;
+                    ^
+..\main.cpp: In function 'int main()':
+..\main.cpp:40:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+20:03:55 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int modeWalk(bool, int)':
+..\main.cpp:6:13: warning: second operand of conditional expression has no effect [-Wunused-value]
+  Bool?coord + 1:coord - 1;
+             ^
+..\main.cpp:6:23: warning: third operand of conditional expression has no effect [-Wunused-value]
+  Bool?coord + 1:coord - 1;
+                       ^
+..\main.cpp: In function 'int main()':
+..\main.cpp:40:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+20:16:32 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:45:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+20:16:47 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int modeWalk(bool, int)':
+..\main.cpp:7:9: warning: statement has no effect [-Wunused-value]
+   coord - 1;
+         ^
+..\main.cpp:9:9: warning: statement has no effect [-Wunused-value]
+   coord + 1;
+         ^
+..\main.cpp: In function 'int main()':
+..\main.cpp:45:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+20:20:06 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int modeWalk(bool, int)':
+..\main.cpp:6:5: error: expected primary-expression before 'bool'
+  if(bool){
+     ^
+..\main.cpp:6:5: error: expected ')' before 'bool'
+..\main.cpp:8:8: error: expected primary-expression before ')' token
+  }else(){
+        ^
+..\main.cpp:8:9: error: expected ';' before '{' token
+  }else(){
+         ^
+..\main.cpp: In function 'int main()':
+..\main.cpp:43:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+..\main.cpp: In function 'int modeWalk(bool, int)':
+..\main.cpp:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+20:21:08 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:43:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+20:21:38 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:43:12: warning: unused variable 'fps' [-Wunused-variable]
+      float fps = 1.0f / (currentTime);
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+20:22:08 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:42:12: warning: unused variable 'currentTime' [-Wunused-variable]
+      float currentTime = fpsClock.restart().asSeconds();
+            ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+20:22:22 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+20:43:32 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+Info: Nothing to build for start
+20:59:57 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+21:00:10 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:8:2: warning: identifier 'nullptr' is a keyword in C++11 [-Wc++0x-compat]
+  std::srand(std::time(nullptr));
+  ^
+..\main.cpp:8:2: error: expected initializer before 'std'
+..\main.cpp:10:1: error: expected unqualified-id before '{' token
+ {
+ ^
+21:00:21 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:9:2: warning: identifier 'nullptr' is a keyword in C++11 [-Wc++0x-compat]
+  std::srand(std::time(nullptr));
+  ^
+..\main.cpp: In function 'int main()':
+..\main.cpp:9:23: error: 'nullptr' was not declared in this scope
+  std::srand(std::time(nullptr));
+                       ^
+21:02:58 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:21:17: error: invalid operands of types 'void(unsigned int)' and 'int' to binary 'operator%'
+     int x=srand%400, y=srand%300;
+                 ^
+..\main.cpp:22:27: error: 'y' was not declared in this scope
+     circle.setPosition(x, y); // centraliza aproximadamente (janela 400x300)
+                           ^
+21:04:05 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:21:17: error: invalid operands of types 'void(unsigned int)' and 'int' to binary 'operator%'
+     int x=srand%400, y=srand%300;
+                 ^
+..\main.cpp:22:27: error: 'y' was not declared in this scope
+     circle.setPosition(x, y); // centraliza aproximadamente (janela 400x300)
+                           ^
+21:04:54 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:21:17: error: invalid operands of types 'void(unsigned int)' and 'int' to binary 'operator%'
+     int x=srand%400, y=srand%300;
+                 ^
+..\main.cpp:22:27: error: 'y' was not declared in this scope
+     circle.setPosition(x, y); // centraliza aproximadamente (janela 400x300)
+                           ^
+21:05:13 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:21:17: error: invalid operands of types 'void(unsigned int)' and 'int' to binary 'operator%'
+     int x=srand%400, y=srand%300;
+                 ^
+..\main.cpp:22:27: error: 'y' was not declared in this scope
+     circle.setPosition(x, y); // centraliza aproximadamente (janela 400x300)
+                           ^
+21:10:01 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:21:17: error: invalid operands of types 'void(unsigned int)' and 'int' to binary 'operator%'
+     int x=srand%400, y=srand%300;
+                 ^
+..\main.cpp:22:27: error: 'y' was not declared in this scope
+     circle.setPosition(x, y); // centraliza aproximadamente (janela 400x300)
+                           ^
+21:11:23 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:21:17: error: invalid operands of types 'void(unsigned int)' and 'int' to binary 'operator%'
+     int x=srand%400, y=srand%300;
+                 ^
+..\main.cpp:22:27: error: 'y' was not declared in this scope
+     circle.setPosition(x, y); // centraliza aproximadamente (janela 400x300)
+                           ^
+21:11:31 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:21:17: error: invalid operands of types 'void(unsigned int)' and 'int' to binary 'operator%'
+     int x=srand%400, y=srand%300;
+                 ^
+..\main.cpp:22:27: error: 'y' was not declared in this scope
+     circle.setPosition(x, y); // centraliza aproximadamente (janela 400x300)
+                           ^
+21:11:47 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+21:12:32 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+21:12:55 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+21:13:12 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+Info: Nothing to build for start
+Info: Nothing to build for start
+21:15:13 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+Info: Nothing to build for start
+Info: Nothing to build for start
+Info: Nothing to build for start
+Info: Nothing to build for start
+21:19:17 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:78:11: error: 'touchBordWhite' was not declared in this scope
+           touchBordWhite=0;
+           ^
+..\main.cpp:33:10: warning: unused variable 'touchBordXBlue' [-Wunused-variable]
+     bool touchBordXBlue=0;
+          ^
+..\main.cpp:34:10: warning: unused variable 'touchBordYBlue' [-Wunused-variable]
+     bool touchBordYBlue=0;
+          ^
+..\main.cpp:35:10: warning: unused variable 'touchBordXYellow' [-Wunused-variable]
+     bool touchBordXYellow=0;
+          ^
+..\main.cpp:36:10: warning: unused variable 'touchBordYYellow' [-Wunused-variable]
+     bool touchBordYYellow=0;
+          ^
+21:19:23 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:78:11: error: 'touchBordWhite' was not declared in this scope
+           touchBordWhite=0;
+           ^
+..\main.cpp:33:10: warning: unused variable 'touchBordXBlue' [-Wunused-variable]
+     bool touchBordXBlue=0;
+          ^
+..\main.cpp:34:10: warning: unused variable 'touchBordYBlue' [-Wunused-variable]
+     bool touchBordYBlue=0;
+          ^
+..\main.cpp:35:10: warning: unused variable 'touchBordXYellow' [-Wunused-variable]
+     bool touchBordXYellow=0;
+          ^
+..\main.cpp:36:10: warning: unused variable 'touchBordYYellow' [-Wunused-variable]
+     bool touchBordYYellow=0;
+          ^
+21:19:25 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:78:11: error: 'touchBordWhite' was not declared in this scope
+           touchBordWhite=0;
+           ^
+..\main.cpp:33:10: warning: unused variable 'touchBordXBlue' [-Wunused-variable]
+     bool touchBordXBlue=0;
+          ^
+..\main.cpp:34:10: warning: unused variable 'touchBordYBlue' [-Wunused-variable]
+     bool touchBordYBlue=0;
+          ^
+..\main.cpp:35:10: warning: unused variable 'touchBordXYellow' [-Wunused-variable]
+     bool touchBordXYellow=0;
+          ^
+..\main.cpp:36:10: warning: unused variable 'touchBordYYellow' [-Wunused-variable]
+     bool touchBordYYellow=0;
+          ^
+21:19:40 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:33:10: warning: unused variable 'touchBordXBlue' [-Wunused-variable]
+     bool touchBordXBlue=0;
+          ^
+..\main.cpp:34:10: warning: unused variable 'touchBordYBlue' [-Wunused-variable]
+     bool touchBordYBlue=0;
+          ^
+..\main.cpp:35:10: warning: unused variable 'touchBordXYellow' [-Wunused-variable]
+     bool touchBordXYellow=0;
+          ^
+..\main.cpp:36:10: warning: unused variable 'touchBordYYellow' [-Wunused-variable]
+     bool touchBordYYellow=0;
+          ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+21:29:10 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:44:10: warning: unused variable 'touchBordXYellow' [-Wunused-variable]
+     bool touchBordXYellow=0;
+          ^
+..\main.cpp:45:10: warning: unused variable 'touchBordYYellow' [-Wunused-variable]
+     bool touchBordYYellow=0;
+          ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+21:29:54 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:44:10: warning: unused variable 'touchBordXYellow' [-Wunused-variable]
+     bool touchBordXYellow=0;
+          ^
+..\main.cpp:45:10: warning: unused variable 'touchBordYYellow' [-Wunused-variable]
+     bool touchBordYYellow=0;
+          ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+15:31:16 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:44:10: warning: unused variable 'touchBordXYellow' [-Wunused-variable]
+     bool touchBordXYellow=0;
+          ^
+..\main.cpp:45:10: warning: unused variable 'touchBordYYellow' [-Wunused-variable]
+     bool touchBordYYellow=0;
+          ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+15:32:46 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:42:10: warning: unused variable 'touchBordXBlue' [-Wunused-variable]
+     bool touchBordXBlue=0;
+          ^
+..\main.cpp:43:10: warning: unused variable 'touchBordYBlue' [-Wunused-variable]
+     bool touchBordYBlue=0;
+          ^
+..\main.cpp:44:10: warning: unused variable 'touchBordXYellow' [-Wunused-variable]
+     bool touchBordXYellow=0;
+          ^
+..\main.cpp:45:10: warning: unused variable 'touchBordYYellow' [-Wunused-variable]
+     bool touchBordYYellow=0;
+          ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+15:33:43 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+15:45:49 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+18:17:22 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+18:23:16 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main(int, char**)':
+..\main.cpp:6:3: error: expected ';' before 'sf'
+   sf::Text text("Hello World", font, 96);//texto com a fonte e tamanho 96
+   ^
+..\main.cpp:7:2: error: 'text' was not declared in this scope
+  text.setColor(sf::Color::Red); //Define o texto na cor vermelho.
+  ^
+..\main.cpp:16:34: error: 'sf::Event::EventType' is not a class or namespace
+     if (event.type == sf::Event::EventType::Closed)
+                                  ^
+..\main.cpp:22:1: error: expected '}' at end of input
+ }
+ ^
+18:23:33 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main(int, char**)':
+..\main.cpp:16:34: error: 'sf::Event::EventType' is not a class or namespace
+     if (event.type == sf::Event::EventType::Closed)
+                                  ^
+..\main.cpp:22:1: error: expected '}' at end of input
+ }
+ ^
+18:24:18 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main(int, char**)':
+..\main.cpp:13:10: error: 'class sf::Text' has no member named 'setFillColor'
+     text.setFillColor(sf::Color::Red); // Usando setFillColor() no lugar de setColor()
+          ^
+18:24:26 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main(int, char**)':
+..\main.cpp:13:10: error: 'class sf::Text' has no member named 'setFillColor'
+     text.setFillColor(sf::Color::Red); // Usando setFillColor() no lugar de setColor()
+          ^
+18:25:02 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:28:32 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main(int, char**)':
+..\main.cpp:16:34: error: 'sf::Event::EventType' is not a class or namespace
+     if (event.type == sf::Event::EventType::Closed)
+                                  ^
+19:29:02 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:33:24 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:33:43 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:33:51 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+19:34:09 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
