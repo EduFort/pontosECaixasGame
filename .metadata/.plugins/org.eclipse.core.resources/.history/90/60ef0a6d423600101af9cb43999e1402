@@ -1,0 +1,46 @@
+#include <SFML/Graphics.hpp>
+/**
+ * @Autor Alisson RS
+ * @site https://gpjecc.blogspot.com/search/label/SFML?&max-results=7
+ * @site https://www.sfml-dev.org/learn.php
+ */
+
+
+int main()
+{
+    //Define a janela de desenho.
+	sf::RenderWindow window(sf::VideoMode(640, 480), "SFML works!");
+
+    window.setFramerateLimit(60); // Limita o frame hate.
+
+    //Define com o nome shape um objeto do tipo circulo de raio 30.
+    sf::CircleShape shape(30.f);
+    shape.setFillColor(sf::Color::Green); //Seta a cor pra verde.
+
+    int x=10, y=10; // Variáveis para a posição do circulo.
+
+    while (window.isOpen()) // Loop do jogo.
+    {
+    	//Pega os eventos tipo fechar a janela ou
+    	//Digitar um tecla ou clicar o mouse.
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+        //Atualiza os objetos do 'mundo'
+        x = x + 1;
+        y = y + 1;
+        shape.setPosition(x, y);
+
+        //Desenha a tela.
+        window.clear();
+        window.draw(shape);
+        window.display();
+    } //Fim do loop do jogo.
+
+    return 0;
+}
+
+

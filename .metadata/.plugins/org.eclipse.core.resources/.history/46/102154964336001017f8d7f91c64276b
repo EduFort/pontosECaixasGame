@@ -1,0 +1,66 @@
+#include <SFML/Graphics.hpp>
+#include <iostream>
+//Classes
+class Bola{
+public:
+	sf::CircleShape shape;
+	int positionX;
+	int positionY;
+
+	bool moveDirectionX=0;
+	bool moveDirectionY=0;
+
+	int radius;
+	int tam;
+
+	Bola(){
+		shape.setFillColor(r);
+		shape.setRadius(r);
+	}
+
+	void updatePosition(){
+		shape.setPosition(positionX, positionY);
+	}
+
+	void randPosition(int windowWidth, int windowWheight){
+		positionX=std::rand()%(windowWidth-tam-radius-1) + radius;
+		positionY=std::rand()%(windowWheight-tam-radius-1) + radius;
+};
+
+//Funções
+
+
+int main(){
+	std::srand(time(NULL));
+	setbuf(stdout, NULL);
+    // Cria a janela
+    sf::RenderWindow window(sf::VideoMode(1280, 720), "Bola Branca - SFML");
+    std::cout<<"rodou"<<std::endl;
+    //Bola de teste
+    sf::CircleShape circleWhite(50.0f); // raio de 30 pixels
+
+    circleWhite.setFillColor(sf::Color::White);
+
+    circleWhite.setPosition(150, 100);
+
+
+    // Loop principal
+    sf::Clock fpsClock;
+    window.setFramerateLimit(100); //limite de fps
+
+    while (window.isOpen()){ //evenmtos
+        sf::Event event;
+        while (window.pollEvent(event)){
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+
+        //impressão
+        window.clear(sf::Color::Black); // fundo preto
+        window.draw(circleWhite);
+        window.display();
+
+    }
+    return 0;
+}
