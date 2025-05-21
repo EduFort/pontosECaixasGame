@@ -1,7 +1,15 @@
-19:34:09 **** Incremental Build of configuration Debug for project start ****
+11:13:53 **** Incremental Build of configuration Debug for project start ****
 Info: Internal Builder is used for build
-g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
-g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:94:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolasJogo.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
 
-19:34:10 Build Finished. 0 errors, 0 warnings. (took 748ms)
+11:13:54 Build Finished. 0 errors, 2 warnings. (took 1s.166ms)
 

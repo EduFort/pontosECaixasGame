@@ -1,0 +1,41 @@
+#include <SFML/Graphics.hpp>
+#include <iostream>
+//Classes
+
+//Funções
+
+
+int main(){
+	std::srand(time(NULL));
+	setbuf(stdout, NULL);
+    // Cria a janela
+    sf::RenderWindow window(sf::VideoMode(400, 300), "Bola Branca - SFML");
+    std::cout<<"rodou"<<std::endl;
+    //Bola de teste
+    sf::CircleShape circleWhite(50.0f); // raio de 30 pixels
+
+    circleWhite.setFillColor(sf::Color::White);
+
+    circleWhite.setPosition(150, 100);
+
+
+    // Loop principal
+    sf::Clock fpsClock;
+    window.setFramerateLimit(100); //limite de fps
+
+    while (window.isOpen()){ //evenmtos
+        sf::Event event;
+        while (window.pollEvent(event)){
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+
+        //impressão
+        window.clear(sf::Color::Black); // fundo preto
+        window.draw(circleWhite);
+        window.display();
+
+    }
+    return 0;
+}

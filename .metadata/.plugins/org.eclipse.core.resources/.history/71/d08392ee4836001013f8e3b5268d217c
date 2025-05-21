@@ -1,0 +1,71 @@
+#include <SFML/Graphics.hpp>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+//Classes
+class Bola {
+public:
+	sf::CircleShape shape;
+	int positionX;
+	int positionY;
+
+	int radius;
+	int tam;
+
+	Bola() {
+		shape.setFillColor(sf::Color::White);
+		tam = 10;
+		radius = tam * 2;
+		shape.setRadius(tam);
+		positionX = 0;
+		positionY = 0;
+	}
+
+	void setaPosicao(int x, int y) {
+		positionX = x;
+		positionY = y;
+		shape.setPosition(x, y);
+	}
+
+};
+
+void setaPosicaoVector(vector<Bola> *bolas) {
+	int cont;
+	(*bolas)[0].setaPosicao(194, 104);
+	cout<<"Abriu a função"<<endl;
+
+}
+
+//Funções
+
+int main() {
+	setbuf(stdout, NULL);
+	// Cria a janela
+	sf::RenderWindow window(sf::VideoMode(950, 720), "Bola Branca - SFML");
+	std::cout << "rodou" << std::endl;
+	//Bola de teste
+
+	vector<Bola> bolasJogo(36);
+
+	setaPosicaoVector(&bolasJogo);
+
+	// Loop principal
+	sf::Clock fpsClock;
+	window.setFramerateLimit(100); //limite de fps
+
+	while (window.isOpen()) { //evenmtos
+		sf::Event event;
+		while (window.pollEvent(event)) {
+			if (event.type == sf::Event::Closed)
+				window.close();
+		}
+
+		//impressão
+		window.clear(sf::Color::Black); // fundo preto
+		window.draw(bolasJogo[0].shape);
+		window.display();
+
+	}
+	return 0;
+}

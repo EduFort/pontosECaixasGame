@@ -728,3 +728,554 @@ g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-wi
 Info: Internal Builder is used for build
 g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
 g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+09:22:15 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:1:29: fatal error: SFML/Graphics.hpp: No such file or directory
+ #include <SFML/Graphics.hpp>
+                             ^
+compilation terminated.
+09:29:05 **** Clean-only build of configuration Debug for project start ****
+rm -rf main.d start.exe main.o 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[C:\SFML\binC:\MinGW\bin;\bin;\usr\bin;C:/Users/eburi/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/eburi/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\UNIVALI\Portugol Studio;C:\MinGW\bin;C:\Users\eburi\AppData\Local\Microsoft\WindowsApps;C:\Users\eburi\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\System32]
+
+09:29:05 **** Clean-only build of configuration Debug for project start ****
+09:29:06 **** Rebuild of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:1:29: fatal error: SFML/Graphics.hpp: No such file or directory
+ #include <SFML/Graphics.hpp>
+                             ^
+compilation terminated.
+09:29:08 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:1:29: fatal error: SFML/Graphics.hpp: No such file or directory
+ #include <SFML/Graphics.hpp>
+                             ^
+compilation terminated.
+09:29:56 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:1:29: fatal error: SFML/Graphics.hpp: No such file or directory
+ #include <SFML/Graphics.hpp>
+                             ^
+compilation terminated.
+09:31:13 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:1:29: fatal error: SFML/Graphics.hpp: No such file or directory
+ #include <SFML/Graphics.hpp>
+                             ^
+compilation terminated.
+09:33:18 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+09:34:20 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+09:35:24 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+Info: Nothing to build for start
+09:36:52 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+09:38:44 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:13:16: error: 'rodou' was not declared in this scope
+     std::cout<<rodou<<std::endl;
+                ^~~~~
+09:38:58 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+09:39:31 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+09:46:11 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:1:19: fatal error: iostram: No such file or directory
+ #include <iostram>
+                   ^
+compilation terminated.
+09:46:21 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+09:48:33 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+09:49:03 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:16:5: error: 'circleWhite' was not declared in this scope
+     circleWhite.setFillColor(sf::Color::White);
+     ^~~~~~~~~~~
+09:50:18 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+09:50:48 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+09:52:17 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+09:54:19 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:00:36 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:67:1: error: expected '}' at end of input
+ }
+ ^
+..\main.cpp:67:1: error: expected unqualified-id at end of input
+10:01:23 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:03:43 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:03:55 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:04:11 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:08:15 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:25:26: error: 'Bolas' was not declared in this scope
+  void SetPosition(vector<Bolas> bolas){
+                          ^~~~~
+..\main.cpp:25:31: error: template argument 1 is invalid
+  void SetPosition(vector<Bolas> bolas){
+                               ^
+..\main.cpp:25:31: error: template argument 2 is invalid
+..\main.cpp: In function 'int main()':
+..\main.cpp:59:21: error: 'ball1' was not declared in this scope
+         window.draw(ball1.shape);
+                     ^~~~~
+10:08:42 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+10:10:37 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In member function 'void Bola::SetPositionVector(std::vector<Bola>)':
+..\main.cpp:32:2: error: expected ';' before '}' token
+  }
+  ^
+..\main.cpp:30:7: warning: unused variable 'cont' [-Wunused-variable]
+   int cont;
+       ^~~~
+10:16:57 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In member function 'void Bola::setPositionVector(std::vector<Bola>)':
+..\main.cpp:31:7: warning: unused variable 'cont' [-Wunused-variable]
+   int cont;
+       ^~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:17:55 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In member function 'void Bola::setPositionVector(std::vector<Bola>)':
+..\main.cpp:31:7: warning: unused variable 'cont' [-Wunused-variable]
+   int cont;
+       ^~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:51:32: error: 'setPositionVector' was not declared in this scope
+     setPositionVector(bolasJogo);
+                                ^
+10:18:30 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In member function 'void Bola::setPositionVector(std::vector<Bola>*)':
+..\main.cpp:32:11: error: base operand of '->' has non-pointer type 'std::vector<Bola>'
+   bolas[0]->setPosition(50, 70);
+           ^~
+..\main.cpp:31:7: warning: unused variable 'cont' [-Wunused-variable]
+   int cont;
+       ^~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:51:32: error: 'setPositionVector' was not declared in this scope
+     setPositionVector(bolasJogo);
+                                ^
+10:22:20 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setPositionVector(std::vector<Bola>)':
+..\main.cpp:33:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:22:54 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setPositionVector(std::vector<Bola>*)':
+..\main.cpp:34:10: error: base operand of '->' has non-pointer type 'std::vector<Bola>'
+  bolas[0]->setPosition(194, 104);
+          ^~
+..\main.cpp:33:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+10:25:23 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setPositionVector(std::vector<Bola>*)':
+..\main.cpp:34:11: error: 'class std::vector<Bola>' has no member named 'setPosition'
+  bolas[0].setPosition(194, 104);
+           ^~~~~~~~~~~
+..\main.cpp:33:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+10:27:36 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setPositionVector(std::vector<Bola>*)':
+..\main.cpp:33:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+10:29:37 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setPositionVector(std::vector<Bola>*)':
+..\main.cpp:33:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file start.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:30:05 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file start.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:33:25 **** Rebuild of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:34:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:53:30: error: 'setPositionVector' was not declared in this scope
+  setPositionVector(&bolasJogo);
+                              ^
+10:33:51 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:34:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:52:30: error: 'setPositionVector' was not declared in this scope
+  setPositionVector(&bolasJogo);
+                              ^
+10:34:12 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:34:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+10:34:27 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:35:39: error: expected ';' before ')' token
+  (*bolas)[0].setaPosicao(194, 104);200);
+                                       ^
+..\main.cpp:35:40: warning: statement has no effect [-Wunused-value]
+  (*bolas)[0].setaPosicao(194, 104);200);
+                                        ^
+..\main.cpp:34:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+10:34:39 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:34:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:40:50 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:41:16: error: expected ';' before '<' token
+  for(int i=0, i<(*bolas).size){
+                ^
+..\main.cpp:41:16: error: expected primary-expression before '<' token
+..\main.cpp:41:30: error: expected ';' before ')' token
+  for(int i=0, i<(*bolas).size){
+                              ^
+..\main.cpp:34:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+..\main.cpp:40:6: warning: unused variable 'espacoY' [-Wunused-variable]
+  int espacoY=40;
+      ^~~~~~~
+10:41:15 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:41:26: error: invalid use of member 'std::vector<_Tp, _Alloc>::size_type std::vector<_Tp, _Alloc>::size() const [with _Tp = Bola; _Alloc = std::allocator<Bola>; std::vector<_Tp, _Alloc>::size_type = unsigned int]' (did you forget the '&' ?)
+  for(int i=0; i<(*bolas).size; i++){
+                 ~~~~~~~~~^~~~
+..\main.cpp:34:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+..\main.cpp:40:6: warning: unused variable 'espacoY' [-Wunused-variable]
+  int espacoY=40;
+      ^~~~~~~
+10:41:37 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:41:23: error: request for member 'size' in 'bolas', which is of pointer type 'std::vector<Bola>*' (maybe you meant to use '->' ?)
+  for(int i=0; i<bolas.size; i++){
+                       ^~~~
+..\main.cpp:34:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+..\main.cpp:40:6: warning: unused variable 'espacoY' [-Wunused-variable]
+  int espacoY=40;
+      ^~~~~~~
+10:41:46 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:41:24: error: invalid use of member 'std::vector<_Tp, _Alloc>::size_type std::vector<_Tp, _Alloc>::size() const [with _Tp = Bola; _Alloc = std::allocator<Bola>; std::vector<_Tp, _Alloc>::size_type = unsigned int]' (did you forget the '&' ?)
+  for(int i=0; i<bolas->size; i++){
+                 ~~~~~~~^~~~
+..\main.cpp:34:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+..\main.cpp:40:6: warning: unused variable 'espacoY' [-Wunused-variable]
+  int espacoY=40;
+      ^~~~~~~
+10:42:27 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:41:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0; i<bolas->size(); i++){
+               ~^~~~~~~~~~~~~~
+..\main.cpp:34:6: warning: unused variable 'cont' [-Wunused-variable]
+  int cont;
+      ^~~~
+..\main.cpp:40:6: warning: unused variable 'espacoY' [-Wunused-variable]
+  int espacoY=40;
+      ^~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:59:58 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:01:01 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:95:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<bolasJogo.size(); i++){
+                ~^~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:01:11 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:95:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<bolasJogo.size(); i++){
+                ~^~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:02:22 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:95:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<bolasJogo.size(); i++){
+                ~^~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:04:50 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:95:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<bolasJogo.size(); i++){
+                ~^~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file start.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:05:17 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:95:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<bolasJogo.size(); i++){
+                ~^~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file start.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:05:19 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file start.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:07:20 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:93:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolasJogo.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file start.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:09:26 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:93:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolasJogo.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file start.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:09:33 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:09:49 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:93:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolasJogo.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+11:11:15 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:93:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolasJogo.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:11:50 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:93:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolasJogo.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:12:58 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:94:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolasJogo.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:13:53 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void setaPosicaoVector(std::vector<Bola>*)':
+..\main.cpp:50:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < bolas->size(); i++) {
+                  ~~^~~~~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:94:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolasJogo.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
