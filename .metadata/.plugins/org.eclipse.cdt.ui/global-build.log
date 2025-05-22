@@ -8343,3 +8343,1235 @@ g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\mai
      if (i < linhasHorizontais.size()) {
                                     ^
 g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:11:43 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:163:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+In file included from C:\SFML\include/SFML/System/Lock.hpp:32:0,
+                 from C:\SFML\include/SFML/System.hpp:36,
+                 from C:\SFML\include/SFML/Window.hpp:32,
+                 from C:\SFML\include/SFML/Graphics.hpp:32,
+                 from ..\main.cpp:1:
+C:\SFML\include/SFML/System/NonCopyable.hpp: In copy constructor 'sf::Window::Window(const sf::Window&)':
+C:\SFML\include/SFML/System/NonCopyable.hpp:67:5: error: 'sf::NonCopyable::NonCopyable(const sf::NonCopyable&)' is private
+     NonCopyable(const NonCopyable&);
+     ^
+In file included from C:\SFML\include/SFML/Window.hpp:40:0,
+                 from C:\SFML\include/SFML/Graphics.hpp:32,
+                 from ..\main.cpp:1:
+C:\SFML\include/SFML/Window/Window.hpp:57:23: error: within this context
+ class SFML_WINDOW_API Window : GlResource, NonCopyable
+                       ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:164:44: note: synthesized method 'sf::Window::Window(const sf::Window&)' first required here 
+     linhasHorizontais[i].passarLinha(janela);
+                                            ^
+..\main.cpp:48:7: error:   initializing argument 1 of 'void Linha::passarLinha(sf::Window)'
+  void passarLinha(sf::Window janela) {
+       ^
+..\main.cpp:166:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:174:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:177:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:180:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:193:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:219:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:245:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+17:13:00 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:163:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+In file included from C:\SFML\include/SFML/System/Lock.hpp:32:0,
+                 from C:\SFML\include/SFML/System.hpp:36,
+                 from C:\SFML\include/SFML/Window.hpp:32,
+                 from C:\SFML\include/SFML/Graphics.hpp:32,
+                 from ..\main.cpp:1:
+C:\SFML\include/SFML/System/NonCopyable.hpp: In copy constructor 'sf::Window::Window(const sf::Window&)':
+C:\SFML\include/SFML/System/NonCopyable.hpp:67:5: error: 'sf::NonCopyable::NonCopyable(const sf::NonCopyable&)' is private
+     NonCopyable(const NonCopyable&);
+     ^
+In file included from C:\SFML\include/SFML/Window.hpp:40:0,
+                 from C:\SFML\include/SFML/Graphics.hpp:32,
+                 from ..\main.cpp:1:
+C:\SFML\include/SFML/Window/Window.hpp:57:23: error: within this context
+ class SFML_WINDOW_API Window : GlResource, NonCopyable
+                       ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:164:44: note: synthesized method 'sf::Window::Window(const sf::Window&)' first required here 
+     linhasHorizontais[i].passarLinha(janela);
+                                            ^
+..\main.cpp:48:7: error:   initializing argument 1 of 'void Linha::passarLinha(sf::Window)'
+  void passarLinha(sf::Window janela) {
+       ^
+..\main.cpp:166:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:174:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:177:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:180:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:193:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:219:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:245:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+17:13:50 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:163:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+In file included from C:\SFML\include/SFML/System/Lock.hpp:32:0,
+                 from C:\SFML\include/SFML/System.hpp:36,
+                 from C:\SFML\include/SFML/Window.hpp:32,
+                 from C:\SFML\include/SFML/Graphics.hpp:32,
+                 from ..\main.cpp:1:
+C:\SFML\include/SFML/System/NonCopyable.hpp: In copy constructor 'sf::Window::Window(const sf::Window&)':
+C:\SFML\include/SFML/System/NonCopyable.hpp:67:5: error: 'sf::NonCopyable::NonCopyable(const sf::NonCopyable&)' is private
+     NonCopyable(const NonCopyable&);
+     ^
+In file included from C:\SFML\include/SFML/Window.hpp:40:0,
+                 from C:\SFML\include/SFML/Graphics.hpp:32,
+                 from ..\main.cpp:1:
+C:\SFML\include/SFML/Window/Window.hpp:57:23: error: within this context
+ class SFML_WINDOW_API Window : GlResource, NonCopyable
+                       ^
+In file included from C:\SFML\include/SFML/Graphics.hpp:40:0,
+                 from ..\main.cpp:1:
+C:\SFML\include/SFML/Graphics/RenderWindow.hpp: In copy constructor 'sf::RenderWindow::RenderWindow(const sf::RenderWindow&)':
+C:\SFML\include/SFML/Graphics/RenderWindow.hpp:44:25: note: synthesized method 'sf::Window::Window(const sf::Window&)' first required here 
+ class SFML_GRAPHICS_API RenderWindow : public Window, public RenderTarget
+                         ^
+In file included from C:\SFML\include/SFML/System/Lock.hpp:32:0,
+                 from C:\SFML\include/SFML/System.hpp:36,
+                 from C:\SFML\include/SFML/Window.hpp:32,
+                 from C:\SFML\include/SFML/Graphics.hpp:32,
+                 from ..\main.cpp:1:
+C:\SFML\include/SFML/System/NonCopyable.hpp: In copy constructor 'sf::RenderTarget::RenderTarget(const sf::RenderTarget&)':
+C:\SFML\include/SFML/System/NonCopyable.hpp:67:5: error: 'sf::NonCopyable::NonCopyable(const sf::NonCopyable&)' is private
+     NonCopyable(const NonCopyable&);
+     ^
+In file included from C:\SFML\include/SFML/Graphics/RenderTexture.hpp:33:0,
+                 from C:\SFML\include/SFML/Graphics.hpp:39,
+                 from ..\main.cpp:1:
+C:\SFML\include/SFML/Graphics/RenderTarget.hpp:51:25: error: within this context
+ class SFML_GRAPHICS_API RenderTarget : NonCopyable
+                         ^
+In file included from C:\SFML\include/SFML/Graphics.hpp:40:0,
+                 from ..\main.cpp:1:
+C:\SFML\include/SFML/Graphics/RenderWindow.hpp: In copy constructor 'sf::RenderWindow::RenderWindow(const sf::RenderWindow&)':
+C:\SFML\include/SFML/Graphics/RenderWindow.hpp:44:25: note: synthesized method 'sf::RenderTarget::RenderTarget(const sf::RenderTarget&)' first required here 
+ class SFML_GRAPHICS_API RenderWindow : public Window, public RenderTarget
+                         ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:164:44: note: synthesized method 'sf::RenderWindow::RenderWindow(const sf::RenderWindow&)' first required here 
+     linhasHorizontais[i].passarLinha(janela);
+                                            ^
+..\main.cpp:48:7: error:   initializing argument 1 of 'void Linha::passarLinha(sf::RenderWindow)'
+  void passarLinha(sf::RenderWindow janela) {
+       ^
+..\main.cpp:166:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:174:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:177:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:180:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:193:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:219:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:245:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+17:14:19 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:163:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:166:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:174:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:177:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:180:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:193:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:219:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:245:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:21:22 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'bool Linha::emCima()':
+..\main.cpp:49:49: error: 'janela' was not declared in this scope
+   sf::Vector2i posicao = sf::Mouse::getPosition(janela);
+                                                 ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:170:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:173:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:181:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:184:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:187:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:200:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:226:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:252:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+17:21:50 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:170:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:173:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:181:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:184:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:187:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:200:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:226:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:252:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:25:21 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Linha::clicarLinha(sf::RenderWindow&)':
+..\main.cpp:71:14: error: 'Janela' was not declared in this scope
+    if(emCima(Janela)){
+              ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:177:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:180:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:188:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:191:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:194:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:207:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:233:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:259:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+17:25:30 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:177:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:180:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:188:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:191:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:194:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:207:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:233:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:259:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:26:22 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:177:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:181:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:190:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:193:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:196:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:209:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:235:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:261:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:30:03 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:179:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:185:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:194:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:197:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:200:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:213:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:239:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:265:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:32:11 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:24:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:24:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:26:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:26:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:179:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:185:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:196:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:199:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:202:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:215:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:241:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:267:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:45:28 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:292:3: warning: identifier 'nullptr' is a keyword in C++11 [-Wc++0x-compat]
+   std::srand(std::time(nullptr));
+   ^
+..\main.cpp:83:7: error: 'void Linha::clicarLinha(sf::RenderWindow&)' cannot be overloaded
+  void clicarLinha(sf::RenderWindow &janela) {
+       ^
+..\main.cpp:70:7: error: with 'bool Linha::clicarLinha(sf::RenderWindow&)'
+  bool clicarLinha(sf::RenderWindow& janela){
+       ^
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:185:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:191:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:202:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:205:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:208:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:221:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:247:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:273:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp: In member function 'void Janela::jogoBot()':
+..\main.cpp:292:24: error: 'nullptr' was not declared in this scope
+   std::srand(std::time(nullptr));
+                        ^
+17:45:43 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:83:7: error: 'void Linha::clicarLinha(sf::RenderWindow&)' cannot be overloaded
+  void clicarLinha(sf::RenderWindow &janela) {
+       ^
+..\main.cpp:70:7: error: with 'bool Linha::clicarLinha(sf::RenderWindow&)'
+  bool clicarLinha(sf::RenderWindow& janela){
+       ^
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:185:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:191:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:202:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:205:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:208:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:221:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:247:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:273:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+17:46:10 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:185:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:191:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:202:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:205:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:208:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:221:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:247:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:273:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:46:40 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:185:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:191:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:202:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:205:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:208:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:221:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:247:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:273:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:52:16 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:189:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:195:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:206:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:209:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:212:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:225:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:251:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:277:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:53:26 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:189:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:195:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:206:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:209:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:212:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:225:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:251:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:277:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+17:57:44 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:189:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:195:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:206:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:209:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:212:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:225:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:251:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:277:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+17:59:39 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:189:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:195:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:206:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:209:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:212:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:225:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:251:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:277:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp: In member function 'void Janela::jogoBot()':
+..\main.cpp:298:13: error: expected initializer before '%' token
+   int rand()%linhasVerticais.size();
+             ^
+..\main.cpp:301:4: error: 'linhaAleatoria' was not declared in this scope
+    linhaAleatoria = rand()%linhasHorizontais.size();
+    ^
+17:59:59 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:189:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:195:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:206:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:209:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:212:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:225:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:251:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:277:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+18:00:28 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:189:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:195:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:206:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:209:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:212:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:225:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:251:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:277:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+18:03:03 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:189:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:195:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:206:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:209:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:212:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:225:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:251:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:277:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp: In member function 'void Janela::jogoBot()':
+..\main.cpp:305:4: error: expected ';' before '}' token
+    }while(escolheu);
+    ^
+..\main.cpp:310:4: error: expected ';' before '}' token
+    }while(escolheu);
+    ^
+18:03:22 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:189:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:195:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:206:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:209:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:212:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:225:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:251:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:277:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+18:04:20 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Linha::Linha(char)':
+..\main.cpp:25:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+                         ^
+..\main.cpp:25:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 107 - 20, 12 };
+        ^
+..\main.cpp:27:25: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+                         ^
+..\main.cpp:27:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 107 - 20 };
+        ^
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:189:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp:195:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                                          ^
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:206:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+..\main.cpp:209:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp:212:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:225:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                                  ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:251:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                                            ^
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:277:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                                              ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start

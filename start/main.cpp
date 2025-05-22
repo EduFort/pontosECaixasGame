@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <cstdio>
+#include <ctime>
 
 using namespace std;
 //Classes
@@ -12,7 +13,7 @@ public:
 	int posicaoY;
 	char direction;
 
-	bool mouseEmCima;
+	bool ativo;
 	bool escolhido;
 
 	sf::Vector2f tam;
@@ -31,7 +32,7 @@ public:
 		shape.setSize(tam);
 		posicaoX = 0;
 		posicaoY = 0;
-		mouseEmCima = 0;
+		ativo = 0;
 		escolhido = 0;
 	}
 
@@ -43,6 +44,49 @@ public:
 
 	void setaCor(int r, int g, int b, int a) {
 		shape.setFillColor(sf::Color(r, g, b, a));
+	}
+
+	bool emCima(sf::RenderWindow& janela){
+		sf::Vector2i posicao = sf::Mouse::getPosition(janela);
+		int x = posicao.x;
+		int y = posicao.y;
+
+		bool emCima = (x > posicaoX) && (x < posicaoX+tam.x) && (y > posicaoY) && (y < posicaoY+tam.y);
+		return  emCima;
+	}
+
+	void passarLinha(sf::RenderWindow& janela) {
+			if(!escolhido){
+				if(emCima(janela)){
+					setaCor(0, 0, 255, 255);
+					ativo=1;
+				}else if(ativo && !emCima(janela)){
+					setaCor(0, 0, 255, 50);
+					ativo=0;
+				}
+			}
+		}
+
+	bool clicarLinha(sf::RenderWindow& janela){
+		if(!escolhido){
+			if(emCima(janela)){
+				if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+					setaCor(0, 0, 255, 255);
+					escolhido=1;
+					return escolhido;
+				}
+			}
+		}
+		return 0;
+	}
+
+	bool clicarLinhaBot() {
+		if(!escolhido){
+			setaCor(255, 0, 0, 255);
+			escolhido = 1;
+			return 1;
+		}
+		return 0;
 	}
 
 	int pegaX() {
@@ -111,11 +155,6 @@ public:
 	vector<Linha> linhasHorizontais;
 	vector<Linha> linhasVerticais;
 
-	vector<int> minimoXLinha;
-	vector<int> minimoYLinha;
-	vector<int> maximoXLinha;
-	vector<int> maximoYLinha;
-
 	//vector<int>
 
 	Janela(int rLargura, int rAltura) : janela(sf::VideoMode(rLargura, rAltura), "Pontos e Caixas") {
@@ -141,14 +180,24 @@ public:
 		setaPosicaoVectorBola();
 		setaPosicaoVectorLinhaHorizontal();
 		setaPosicaoVectorVertical();
-		carregarMinMaxLinha();
 	}
 	void eventos() {
 		sf::Event event;
 		while (janela.pollEvent(event)) {
 			if (event.type == sf::Event::Closed)
 				janela.close();
-			passarLinha();
+			for(int i=0; i<linhasHorizontais.size(); i++){
+				linhasHorizontais[i].passarLinha(janela);
+				if(linhasHorizontais[i].clicarLinha(janela)){
+					jogoBot();
+				}
+			}
+			for(int i=0; i<linhasHorizontais.size(); i++){
+				linhasVerticais[i].passarLinha(janela);
+				if(linhasVerticais[i].clicarLinha(janela)){
+					jogoBot();
+				}
+			}
 		}
 	}
 
@@ -243,61 +292,25 @@ public:
 		}
 	}
 
-	void carregarMinMaxLinha() {
-		for (int i = 0; i < linhasHorizontais.size(); i++) {
-			minimoXLinha.push_back(linhasHorizontais[i].pegaX());
-			minimoYLinha.push_back(linhasHorizontais[i].pegaY());
-			maximoXLinha.push_back(linhasHorizontais[i].pegaX() + 87);
-			maximoYLinha.push_back(linhasHorizontais[i].pegaY() + 12);
+	void jogoBot(){
+		std::srand(std::time(NULL));
+		int tipoLinha = rand()%2;
+		int linhaAleatoria;
+		bool escolheu;
+
+		if(tipoLinha==0){
+			do{
+				linhaAleatoria = rand()%linhasHorizontais.size();
+				escolheu = linhasHorizontais[linhaAleatoria].clicarLinhaBot();
+			}while(!escolheu);
+		} else{
+			do{
+				linhaAleatoria = rand()%linhasVerticais.size();
+				escolheu = linhasVerticais[linhaAleatoria].clicarLinhaBot();
+			}while(!escolheu);
 		}
 
-		for (int i = 0; i < linhasVerticais.size(); i++) {
-			minimoXLinha.push_back(linhasVerticais[i].pegaX());
-			minimoYLinha.push_back(linhasVerticais[i].pegaY());
-			maximoXLinha.push_back(linhasVerticais[i].pegaX() + 12);
-			maximoYLinha.push_back(linhasVerticais[i].pegaY() + 87);
-		}
-	}
-
-	bool passarLinha() {
-		sf::Mouse mouse;
-		sf::Vector2i posicao = mouse.getPosition(janela);
-		int x = posicao.x;
-		int y = posicao.y;
-
-		for (int i = 0; i < minimoXLinha.size(); i++) {
-			bool dentroX = (x > minimoXLinha[i]) && (x < maximoXLinha[i]);
-			bool dentroY = (y > minimoYLinha[i]) && (y < maximoYLinha[i]);
-
-			if (dentroX && dentroY) {
-				if (i < linhasHorizontais.size()) {
-					linhasHorizontais[i].setaCor(0, 0, 255, 255);
-					linhasHorizontais[i].mouseEmCima = 1;
-					return linhasHorizontais[i].mouseEmCima;
-				} else {
-					linhasVerticais[i - linhasHorizontais.size()].setaCor(0, 0, 255, 255);
-					linhasVerticais[i - linhasHorizontais.size()].mouseEmCima = 1;
-					return linhasVerticais[i - linhasHorizontais.size()].mouseEmCima;
-				}
-			} else {
-				if (i < linhasHorizontais.size()) {
-					if (linhasHorizontais[i].mouseEmCima) {
-						linhasHorizontais[i].setaCor(0, 0, 255, 50);
-						linhasHorizontais[i].mouseEmCima = 0;
-						return linhasHorizontais[i].mouseEmCima;
-					}
-				} else {
-					if (linhasVerticais[i - linhasHorizontais.size()].mouseEmCima) {
-						linhasVerticais[i - linhasHorizontais.size()].setaCor(0,
-								0, 255, 50);
-						linhasVerticais[i - linhasHorizontais.size()].mouseEmCima =
-								0;
-						return linhasVerticais[i - linhasHorizontais.size()].mouseEmCima;
-					}
-				}
-			}
-		}
-		return 0;
+		//cout << tipoLinha << endl;
 	}
 
 };
