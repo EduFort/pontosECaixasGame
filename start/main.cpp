@@ -12,14 +12,14 @@ public:
 		int posicaoX;
 		int posicaoY;
 
-		bool ativo;
+		bool fechado;
 		int lado;
 		sf::Vector2f tam;
 
 		Quadrado() {
 			posicaoX=0;
 			posicaoY=0;
-			ativo=0;
+			fechado=0;
 
 			lado=95;
 			tam = {lado, lado};
@@ -38,7 +38,7 @@ public:
 		}
 
 		void ativaQuadrado(char quemJogou){
-			ativo=1;
+			fechado=1;
 			if(quemJogou == 'p'){
 				setaCor(0, 0, 255, 200);
 			}else if(quemJogou == 'b'){
@@ -237,6 +237,7 @@ public:
 				linhasHorizontais[i].passarLinha(janela);
 				if(linhasHorizontais[i].clicarLinha(janela)){
 					fecharQuadrado('p');
+					sf::sleep(sf::seconds(0.5));
 					jogoBot();
 					fecharQuadrado('b');
 				}
@@ -245,6 +246,7 @@ public:
 				linhasVerticais[i].passarLinha(janela);
 				if(linhasVerticais[i].clicarLinha(janela)){
 					fecharQuadrado('p');
+					sf::sleep(sf::seconds(0.5));
 					jogoBot();
 					fecharQuadrado('b');
 				}
@@ -393,16 +395,21 @@ void setaPosicaoVectorBola() {
 		//cout << tipoLinha << endl;
 	}
 
-	void fecharQuadrado(char quemJogou){
-		int cont=0;
-		for(int i=0; i<quadrados.size(); i++){
-			if((linhasHorizontais[i].escolhido) && (linhasVerticais[i].escolhido)){
-				if((linhasHorizontais[i+3].escolhido && linhasVerticais[i+1+cont].escolhido)){
-					quadrados[i].ativaQuadrado(quemJogou);
-					if(isMult(i, 5)){
-						cont++;
-					}
-				}
+	void fecharQuadrado(char quemJogou) {
+		int cont = -1;
+		for (int i = 0; i < quadrados.size(); i++) {
+
+			if (isMult(i, 5)) {
+				cont++;
+			}
+
+			bool estaFechado = (linhasHorizontais[i].escolhido)
+					&& (linhasVerticais[i + cont].escolhido)
+					&& (linhasHorizontais[i + 5].escolhido
+							&& linhasVerticais[i + 1 + cont].escolhido);
+
+			if (estaFechado && !quadrados[i].fechado) {
+				quadrados[i].ativaQuadrado(quemJogou);
 			}
 		}
 	}
