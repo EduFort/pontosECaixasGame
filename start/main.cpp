@@ -36,6 +36,17 @@ public:
 		void setaCor(int r, int g, int b, int a) {
 			shape.setFillColor(sf::Color(r, g, b, a));
 		}
+
+		void ativaQuadrado(char quemJogou){
+			ativo=1;
+			if(quemJogou == 'p'){
+				setaCor(0, 0, 255, 200);
+			}else if(quemJogou == 'b'){
+				setaCor(255, 0, 0, 200);
+			}else{
+				exit(2);
+			}
+		}
 };
 
 class Linha {
@@ -225,13 +236,17 @@ public:
 			for(int i=0; i<linhasHorizontais.size(); i++){
 				linhasHorizontais[i].passarLinha(janela);
 				if(linhasHorizontais[i].clicarLinha(janela)){
+					fecharQuadrado('p');
 					jogoBot();
+					fecharQuadrado('b');
 				}
 			}
 			for(int i=0; i<linhasHorizontais.size(); i++){
 				linhasVerticais[i].passarLinha(janela);
 				if(linhasVerticais[i].clicarLinha(janela)){
+					fecharQuadrado('p');
 					jogoBot();
+					fecharQuadrado('b');
 				}
 			}
 		}
@@ -355,25 +370,41 @@ void setaPosicaoVectorBola() {
 		}
 	}
 
-			void jogoBot(){
+	void jogoBot() {
 		std::srand(std::time(NULL));
-		int tipoLinha = rand()%2;
+		int tipoLinha = rand() % 2;
 		int linhaAleatoria;
 		bool escolheu;
 
-		if(tipoLinha==0){
-			do{
-				linhaAleatoria = rand()%linhasHorizontais.size();
+		if (tipoLinha == 0) {
+			do {
+				linhaAleatoria = rand
+
+				() % linhasHorizontais.size();
 				escolheu = linhasHorizontais[linhaAleatoria].clicarLinhaBot();
-			}while(!escolheu);
-		} else{
-			do{
-				linhaAleatoria = rand()%linhasVerticais.size();
+			} while (!escolheu);
+		} else {
+			do {
+				linhaAleatoria = rand() % linhasVerticais.size();
 				escolheu = linhasVerticais[linhaAleatoria].clicarLinhaBot();
-			}while(!escolheu);
+			} while (!escolheu);
 		}
 
 		//cout << tipoLinha << endl;
+	}
+
+	void fecharQuadrado(char quemJogou){
+		int cont=0;
+		for(int i=0; i<quadrados.size(); i++){
+			if((linhasHorizontais[i].escolhido) && (linhasVerticais[i].escolhido)){
+				if((linhasHorizontais[i+3].escolhido && linhasVerticais[i+1+cont].escolhido)){
+					quadrados[i].ativaQuadrado(quemJogou);
+					if(isMult(i, 5)){
+						cont++;
+					}
+				}
+			}
+		}
 	}
 
 };

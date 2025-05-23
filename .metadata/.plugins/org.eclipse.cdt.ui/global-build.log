@@ -11441,3 +11441,674 @@ g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\mai
    for (int i = 0; i < bolas.size(); i++) {
                                   ^
 g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:54:31 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:225:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:231:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:242:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:245:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:248:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:251:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:264:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:289:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:315:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:340:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+10:55:08 **** Clean-only build of configuration Debug for project start ****
+rm -rf main.d start.exe main.o 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[C:\SFML-2.4.2;\bin;C:\MinGW\bin;\bin;\usr\bin;C:/Users/eburi/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/eburi/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\UNIVALI\Portugol Studio;C:\MinGW\bin;C:\Users\eburi\AppData\Local\Microsoft\WindowsApps;C:\Users\eburi\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\System32]
+
+10:55:08 **** Clean-only build of configuration Debug for project start ****
+10:55:08 **** Rebuild of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:225:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:231:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:242:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:245:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:248:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:251:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:264:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:289:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:315:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:340:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+Info: Nothing to build for start
+Info: Nothing to build for start
+Info: Nothing to build for start
+11:24:58 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Quadrado::ativaQuadrado(char)':
+..\main.cpp:43:11: error: 'class sf::RectangleShape' has no member named 'setaCor'
+     shape.setaCor(0, 0, 255, 200);
+           ^~~~~~~
+..\main.cpp:45:11: error: 'class sf::RectangleShape' has no member named 'setaCor'
+     shape.setaCor(255, 0, 0, 200);
+           ^~~~~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:234:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:237:24: error: 'fecahrQuadrado' was not declared in this scope
+      fecahrQuadrado('p');
+                        ^
+..\main.cpp:242:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:255:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:258:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:261:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:264:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:277:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:302:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:328:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:353:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::fecharQuadrado(char)':
+..\main.cpp:396:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<linhasHorizontais.size(); i++){
+                ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:398:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int j=0; j<linhasVerticais.size(); i++){
+                  ~^~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:399:41: error: no match for 'operator&&' (operand types are 'bool' and '__gnu_cxx::__alloc_traits<std::allocator<Linha> >::value_type {aka Linha}')
+      if((linhasVerticais[j+cont].ativo) && linhasHorizontais[j+1+cont]){
+                                          
+..\main.cpp:399:41: note: candidate: operator&&(bool, bool) <built-in>
+..\main.cpp:399:41: note:   no known conversion for argument 2 from '__gnu_cxx::__alloc_traits<std::allocator<Linha> >::value_type {aka Linha}' to 'bool'
+11:25:21 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:234:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:237:24: error: 'fecahrQuadrado' was not declared in this scope
+      fecahrQuadrado('p');
+                        ^
+..\main.cpp:242:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:255:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:258:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:261:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:264:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:277:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:302:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:328:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:353:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::fecharQuadrado(char)':
+..\main.cpp:396:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<linhasHorizontais.size(); i++){
+                ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:398:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int j=0; j<linhasVerticais.size(); i++){
+                  ~^~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:399:41: error: no match for 'operator&&' (operand types are 'bool' and '__gnu_cxx::__alloc_traits<std::allocator<Linha> >::value_type {aka Linha}')
+      if((linhasVerticais[j+cont].ativo) && linhasHorizontais[j+1+cont]){
+                                          
+..\main.cpp:399:41: note: candidate: operator&&(bool, bool) <built-in>
+..\main.cpp:399:41: note:   no known conversion for argument 2 from '__gnu_cxx::__alloc_traits<std::allocator<Linha> >::value_type {aka Linha}' to 'bool'
+11:26:58 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:236:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:239:24: error: 'fecahrQuadrado' was not declared in this scope
+      fecahrQuadrado('p');
+                        ^
+..\main.cpp:244:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:257:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:260:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:263:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:266:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:279:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:304:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:330:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:355:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::fecharQuadrado(char)':
+..\main.cpp:398:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<linhasHorizontais.size(); i++){
+                ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:400:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int j=0; j<linhasVerticais.size(); i++){
+                  ~^~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:401:41: error: no match for 'operator&&' (operand types are 'bool' and '__gnu_cxx::__alloc_traits<std::allocator<Linha> >::value_type {aka Linha}')
+      if((linhasVerticais[j+cont].ativo) && linhasHorizontais[j+1+cont]){
+                                          
+..\main.cpp:401:41: note: candidate: operator&&(bool, bool) <built-in>
+..\main.cpp:401:41: note:   no known conversion for argument 2 from '__gnu_cxx::__alloc_traits<std::allocator<Linha> >::value_type {aka Linha}' to 'bool'
+11:27:09 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:236:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:239:24: error: 'fecahrQuadrado' was not declared in this scope
+      fecahrQuadrado('p');
+                        ^
+..\main.cpp:244:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:257:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:260:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:263:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:266:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:279:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:304:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:330:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:355:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::fecharQuadrado(char)':
+..\main.cpp:398:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<linhasHorizontais.size(); i++){
+                ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:400:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int j=0; j<linhasVerticais.size(); i++){
+                  ~^~~~~~~~~~~~~~~~~~~~~~~
+11:28:00 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:236:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:244:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:257:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:260:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:263:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:266:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:279:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:304:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:330:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:355:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::fecharQuadrado(char)':
+..\main.cpp:398:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<linhasHorizontais.size(); i++){
+                ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:400:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int j=0; j<linhasVerticais.size(); i++){
+                  ~^~~~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:32:50 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:236:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:244:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:257:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:260:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:263:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:266:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:279:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:304:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:330:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:355:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::fecharQuadrado(char)':
+..\main.cpp:398:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<quadrados.size(); i++){
+                ~^~~~~~~~~~~~~~~~~
+..\main.cpp:399:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int j=0; j<linhasHorizontais.size(); j++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:401:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for(int k=0; k<linhasVerticais.size(); k++){
+                     ~^~~~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:41:59 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:236:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:244:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:257:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:260:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:263:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:266:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:279:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:304:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:330:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:355:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::fecharQuadrado(char)':
+..\main.cpp:398:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<quadrados.size(); i++){
+                ~^~~~~~~~~~~~~~~~~
+..\main.cpp:399:36: error: no match for 'operator&&' (operand types are 'bool' and '__gnu_cxx::__alloc_traits<std::allocator<Linha> >::value_type {aka Linha}')
+    if((linhasHorizontais[i].ativo) && (linhasVerticais[i])){
+                                     
+..\main.cpp:399:36: note: candidate: operator&&(bool, bool) <built-in>
+..\main.cpp:399:36: note:   no known conversion for argument 2 from '__gnu_cxx::__alloc_traits<std::allocator<Linha> >::value_type {aka Linha}' to 'bool'
+11:42:11 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:236:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:244:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:257:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:260:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:263:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:266:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:279:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:304:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:330:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:355:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::fecharQuadrado(char)':
+..\main.cpp:398:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<quadrados.size(); i++){
+                ~^~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:43:07 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:236:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:244:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:257:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:260:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:263:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:266:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:279:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:304:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:330:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:355:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::fecharQuadrado(char)':
+..\main.cpp:398:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<quadrados.size(); i++){
+                ~^~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+11:51:10 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:236:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:244:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:257:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:260:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:263:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:266:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:279:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:304:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:330:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:355:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::fecharQuadrado(char)':
+..\main.cpp:398:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i=0; i<quadrados.size(); i++){
+                ~^~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
