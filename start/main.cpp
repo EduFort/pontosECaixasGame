@@ -6,38 +6,36 @@
 
 using namespace std;
 //Classes
-class Quadrado{
+class Quadrado{ //Classes dos quadrados formados entre linhas e pontos
 public:
 	sf::RectangleShape shape;
-		int posicaoX;
+		int posicaoX; //coordanadas do quadrado
 		int posicaoY;
 
-		bool fechado;
-		int lado;
-		sf::Vector2f tam;
+		bool fechado; //Verdadeiro quando as linhas em volta são selecionadas
+		sf::Vector2f tam; // vetor com as medidas do quadrado
 
-		Quadrado() {
+		Quadrado() { //inicializa as variáveis da classe
 			posicaoX=0;
 			posicaoY=0;
 			fechado=0;
 
-			lado=95;
-			tam = {lado, lado};
+			tam = {95, 95};
 			shape.setSize(tam);
 			setaCor(100, 250, 100, 0);
 		}
 
-		void setaPosicao(int x, int y) {
+		void setaPosicao(int x, int y) { //seta nova posição
 			posicaoX = x;
 			posicaoY = y;
 			shape.setPosition(x, y);
 		}
 
-		void setaCor(int r, int g, int b, int a) {
+		void setaCor(int r, int g, int b, int a) { //seta nova cor
 			shape.setFillColor(sf::Color(r, g, b, a));
 		}
 
-		void fechar(){
+		void fechar(){ //marca quadrado como fechado
 			fechado=1;
 		}
 };
@@ -45,16 +43,17 @@ public:
 class Linha {
 public:
 	sf::RectangleShape shape;
-	int posicaoX;
+	int posicaoX; //coordanadas do quadrado
 	int posicaoY;
-	char direcao;
 
-	bool ativo;
-	bool escolhido;
+	char direcao; //direção da linha
 
-	sf::Vector2f tam;
+	bool ativo; //Verdadeiro se o mouse está em cima da linha
+	bool escolhido; //Verdadeiro se a linha foi clicada
 
-	Linha(char rDirecao) {
+	sf::Vector2f tam;  // vetor com as medidas do quadrado
+
+	Linha(char rDirecao) { //inicializa as variáveis da classe
 		shape.setFillColor(sf::Color(0, 0, 255, 50));
 		direcao = rDirecao;
 		if (direcao == 'h') {
@@ -72,7 +71,7 @@ public:
 		escolhido = 0;
 	}
 
-	Linha(int altura, int largura, int x, int y){
+	Linha(int altura, int largura, int x, int y){ //Inicializa uso da classe para fins estéticos
 		shape.setFillColor(sf::Color(0, 0, 0, 255));
 		tam={altura, largura};
 		shape.setSize(tam);
@@ -83,38 +82,38 @@ public:
 		escolhido=0;
 	}
 
-	void setaPosicao(int x, int y) {
+	void setaPosicao(int x, int y) { //seta nova posição
 		posicaoX = x;
 		posicaoY = y;
 		shape.setPosition(x, y);
 	}
 
-	void setaCor(int r, int g, int b, int a) {
+	void setaCor(int r, int g, int b, int a) { //seta nova cor
 		shape.setFillColor(sf::Color(r, g, b, a));
 	}
 
-	bool emCima(sf::RenderWindow& janela){
+	bool emCima(sf::RenderWindow& janela){ //verifica se mouse está em cima da linha
 		sf::Vector2i posicao = sf::Mouse::getPosition(janela);
-		int x = posicao.x;
+		int x = posicao.x; //posições x y do mouse
 		int y = posicao.y;
 
 		bool emCima = (x > posicaoX) && (x < posicaoX+tam.x) && (y > posicaoY) && (y < posicaoY+tam.y);
 		return  emCima;
 	}
 
-	void passarLinha(sf::RenderWindow& janela) {
-			if(!escolhido){
-				if(emCima(janela)){
-					setaCor(0, 0, 255, 255);
-					ativo=1;
-				}else if(ativo && !emCima(janela)){
-					setaCor(0, 0, 255, 50);
-					ativo=0;
-				}
+	void passarLinha(sf::RenderWindow &janela) { //ativa a linha (muda a cor) quando o mouse está em cima
+		if (!escolhido) {
+			if (emCima(janela)) {
+				setaCor(0, 0, 255, 255);
+				ativo = 1;
+			} else if (ativo && !emCima(janela)) {
+				setaCor(0, 0, 255, 50);
+				ativo = 0;
 			}
 		}
+	}
 
-	bool clicarLinha(sf::RenderWindow& janela){
+	bool clicarLinha(sf::RenderWindow& janela){ //ve se a linha foi clicada, e caso sim a ativa quando a linha é clicada
 		if(!escolhido){
 			if(emCima(janela)){
 				if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
@@ -127,7 +126,7 @@ public:
 		return 0;
 	}
 
-	bool clicarLinhaBot() {
+	bool clicarLinhaBot() { //clique de linha feito pelo bot
 		if(!escolhido){
 			setaCor(255, 0, 0, 255);
 			escolhido = 1;
@@ -136,26 +135,26 @@ public:
 		return 0;
 	}
 
-	int pegaX() {
+	int pegaX() { //retorno posição x
 		return posicaoX;
 	}
 
-	int pegaY() {
+	int pegaY() { //retorno posição y
 		return posicaoY;
 	}
 
 };
 
-class Bola {
+class Bola { //classe das bolas que aparecem na tela
 public:
 	sf::CircleShape shape;
-	int posicaoX;
+	int posicaoX; //posições x e y da bola
 	int posicaoY;
 
-	int radius;
+	int radius; //raio e tamanho do círculo
 	int tam;
 
-	Bola() {
+	Bola() { //inicializa as variáveis da classee
 		shape.setFillColor(sf::Color::White);
 		radius = 10;
 		tam = radius * 2;
@@ -164,51 +163,46 @@ public:
 		posicaoY = 0;
 	}
 
-	void setaPosicao(int x, int y) {
+	void setaPosicao(int x, int y) { //seta nova posição da bola
 		posicaoX = x;
 		posicaoY = y;
 		shape.setPosition(x, y);
 	}
 
-	int pegaX() {
+	int pegaX() { //retorno posição x
 		return posicaoX;
 	}
 
-	int pegaY() {
+	int pegaY() { //retorno posição y
 		return posicaoY;
 	}
 
 };
 
-class Jogador{
+class Jogador{ //classe dos jogadores da partida
 public:
-	string nome;
-	int linhasSelecionadas;
-	int pontos;
+	string nome; //nome do jogador
 
-	Jogador(string rNome) {
+	int pontos; //quantidade de pontos
+
+	Jogador(string rNome) { //inicializa as variáveis da classee
 		nome = rNome;
-		linhasSelecionadas = 0;
 		pontos = 0;
 	}
 
-	void adicionaLinhaSelecionada(){
-		linhasSelecionadas++;
-	}
-
-	void adicionaPonto(){
+	void adicionaPonto(){ //adiciona um ponto ao jogador
 		pontos++;
 		imprimePonto();
 	}
 
-	void imprimePonto(){
+	void imprimePonto(){ //mostra os pontos do jogador
 		cout << nome << ": " << pontos << endl;
 	}
 
 };
 
 //FunÃ§Ãµes
-bool eMultiplo(int num, int mult) {
+bool eMultiplo(int num, int mult) { //verifica se um numero é multiplo do outro
 	if (num % mult == 0) {
 		return 1;
 	} else {
@@ -218,90 +212,93 @@ bool eMultiplo(int num, int mult) {
 
 /*********************************funÃ§Ã£o jogo*********************************/
 
-class Janela {
+class Janela { //janela do jogo
 public:
 	sf::RenderWindow janela;
-	int largura;
+	int largura; //tamanho da janela
 	int altura;
-	int limiteQuadros;
 
-	Jogador jogador;
+	int limiteQuadros; //limite de fps do jogo
+
+	Jogador jogador; //jogadores do jogo
 	Jogador bot;
 
-	vector<Quadrado> quadrados;
+	vector<Quadrado> quadrados; //vetores dos elementos visuais
 	vector<Linha> linhasHorizontais;
 	vector<Linha> linhasVerticais;
 	vector<Bola> bolas;
 
-	//vector<int>
-
-	Janela(int rLargura, int rAltura) : janela(sf::VideoMode(rLargura, rAltura), "Pontos e Caixas"), jogador("Player"), bot("Bot"){
+	Janela(int rLargura, int rAltura) : janela(sf::VideoMode(rLargura, rAltura), "Pontos e Caixas"), jogador("Player"), bot("Bot"){ //inicializa as variáveis da classe e objetos da classe
 		largura = rLargura;
 		altura = rAltura;
 		limiteQuadros = 100;
 		janela.setFramerateLimit(limiteQuadros);
 	}
 
-	void gameLoop() {
-		carregar();
-		while (janela.isOpen()) { //evenmtos
-			eventos();
-			desenhar();
+	void gameLoop() { //loop onde aocntece as etapas do jogo
+		carregar(); //carrega os elementos visuais
+		while (janela.isOpen()) {
+			eventos(); //eventos do jogo
+			desenhar(); //desenha os elementos visuais
 		}
 	}
 
-	void carregar() {
+	void carregar() { //carrega os elementos visuais
 		quadrados = vector<Quadrado>(25);
 		linhasHorizontais = vector<Linha>(30, Linha('h'));
 		linhasVerticais = vector<Linha>(30, Linha('v'));
 		bolas = vector<Bola>(36);
 
-		setaPosicaoVectorQuadrado();
+		setaPosicaoVectorQuadrado(); //coloca os elementos do vetor em suas posições
 		setaPosicaoVectorLinhaHorizontal();
 		setaPosicaoVectorVertical();
 		setaPosicaoVectorBola();
 	}
-	void eventos() {
+
+	void eventos() { //verifica possíveis ações do jogo
 		sf::Event event;
 		bool acabou=0;
+		bool fechou=0;
 		while (janela.pollEvent(event)) {
 			if (event.type == sf::Event::Closed)
 				janela.close();
 			for(int i=0; i<linhasHorizontais.size(); i++){
-				linhasHorizontais[i].passarLinha(janela);
+				linhasHorizontais[i].passarLinha(janela); //primeiro para linhas horizontais
 				if(linhasHorizontais[i].clicarLinha(janela)){
+					fechou = fecharQuadrado('p');
 					acabou = fim();
-					if(!fecharQuadrado('p') && !acabou){
+					if(!fechou && !acabou){
 						do{
 							sf::sleep(sf::seconds(0.5));
 							jogoBot();
+							fechou = fecharQuadrado('b');
 							acabou = fim();
-						} while(fecharQuadrado('b') && !acabou);
+						} while(fechou && !acabou);
 					}
 				}
-			}
-			for(int i=0; i<linhasVerticais.size(); i++){
-				linhasVerticais[i].passarLinha(janela);
+				linhasVerticais[i].passarLinha(janela); //depois para verticais
 				if(linhasVerticais[i].clicarLinha(janela)){
+					fechou = fecharQuadrado('p');
 					acabou = fim();
-					if(!fecharQuadrado('p') && !fim()){
+					if(!fechou && !acabou){
 						do{
 							sf::sleep(sf::seconds(0.5));
 							jogoBot();
+							fechou = fecharQuadrado('b');
 							acabou = fim();
-						} while(fecharQuadrado('b') && !fim());
+						} while(fechou && !acabou);
 					}
 				}
 			}
 		}
 	}
 
-	void desenhar() {
+	void desenhar() { //desenha os elementos na tela
 		janela.clear(sf::Color::Black); // fundo preto
 		for (int i = 0; i < quadrados.size(); i++) {
 			janela.draw(quadrados[i].shape);
 		}
-		for (int i = 0; i < linhasHorizontais.size(); i++) {
+		for (int i = 0; i < linhasHorizontais.size(); i++) { //linhas e bolas
 			janela.draw(linhasHorizontais[i].shape);
 		}
 		for (int i = 0; i < linhasVerticais.size(); i++) {
@@ -314,44 +311,45 @@ public:
 	}
 
 	void setaPosicaoVectorQuadrado() {
-	int cont = 0;
-	int xOrigem = 194+16;
-	int yOrigem = 104+16;
-	int espaco = 107;
-	int xQuadrado = xOrigem;
-	int yQuadrado = yOrigem;
-	for (int i = 0; i < quadrados.size(); i++) {
-		if (i != 0) {
-			if (eMultiplo(i, 5)) {
-				xQuadrado = xOrigem;
-				yQuadrado = yOrigem;
-				cont++;
-				yQuadrado += espaco * cont;
+		int linhasPassadas = 0;
+		int xOrigem = 210;
+		int yOrigem = 120;
+		int espaco = 107;
+		int xQuadrado = xOrigem;
+		int yQuadrado = yOrigem;
+		int quadradosPorLinha=5;
+		for (int i = 0; i < quadrados.size(); i++) {
+			if (i != 0) {
+				if (eMultiplo(i, quadradosPorLinha)) {
+					xQuadrado = xOrigem;
+					yQuadrado = yOrigem;
+					linhasPassadas++;
+					yQuadrado += espaco * linhasPassadas;
+				} else {
+					xQuadrado += espaco;
+				}
+				quadrados[i].setaPosicao(xQuadrado, yQuadrado);
 			} else {
-				xQuadrado += espaco;
+				quadrados[i].setaPosicao(xOrigem, yOrigem);
 			}
-			quadrados[i].setaPosicao(xQuadrado, yQuadrado);
-		} else {
-			quadrados[i].setaPosicao(xOrigem, yOrigem);
 		}
 	}
-}
 
 void setaPosicaoVectorLinhaHorizontal() {
-		int cont = 0;
+		int linhasPassadas = 0;
 		int xOrigem = 194 + bolas[0].tam;
-		int yOrigem = 104 + 4;
+		int yOrigem = 108;
 		int espaco = 107;
 		int xLinha = xOrigem;
 		int yLinha = yOrigem;
-		int mult = 5;
+		int linhasHorizontaisPorLinha = 5;
 		for (int i = 0; i < linhasHorizontais.size(); i++) {
 			if (i != 0) {
-				if (eMultiplo(i, mult)) {
+				if (eMultiplo(i, linhasHorizontaisPorLinha)) {
 					xLinha = xOrigem;
 					yLinha = yOrigem;
-					cont++;
-					yLinha += espaco * cont;
+					linhasPassadas++;
+					yLinha += espaco * linhasPassadas;
 				} else {
 					xLinha += espaco;
 				}
@@ -364,24 +362,23 @@ void setaPosicaoVectorLinhaHorizontal() {
 	}
 
 void setaPosicaoVectorVertical() {
-		int cont = 0;
+		int linhasPassadas = 0;
 		int xOrigem = 194 + 4;
 		int yOrigem = 104 + bolas[0].tam;
 		int espaco = 107;
 		int xLinha = xOrigem;
 		int yLinha = yOrigem;
-		int mult = 6;
+		int linhasverticaisPorLinha = 6;
 		for (int i = 0; i < linhasVerticais.size(); i++) {
 			if (i != 0) {
-				if (eMultiplo(i, mult)) {
+				if (eMultiplo(i, linhasverticaisPorLinha)) {
 					xLinha = xOrigem;
 					yLinha = yOrigem;
-					cont++;
-					yLinha += espaco * cont;
+					linhasPassadas++;
+					yLinha += espaco * linhasPassadas;
 				} else {
 					xLinha += espaco;
 				}
-				//(*bola).setaPosicao();
 				linhasVerticais[i].setaPosicao(xLinha, yLinha);
 			} else {
 				linhasVerticais[i].setaPosicao(xOrigem, yOrigem);
@@ -390,23 +387,23 @@ void setaPosicaoVectorVertical() {
 	}
 
 void setaPosicaoVectorBola() {
-		int cont = 0;
+		int linhasPassadas = 0;
 		int xOrigem = 194;
 		int yOrigem = 104;
 		int espaco = 107;
 		int xBola = xOrigem;
 		int yBola = yOrigem;
+		int bolasPorLinha =6;
 		for (int i = 0; i < bolas.size(); i++) {
 			if (i != 0) {
-				if (eMultiplo(i, 6)) {
+				if (eMultiplo(i, bolasPorLinha)) {
 					xBola = xOrigem;
 					yBola = yOrigem;
-					cont++;
-					yBola += espaco * cont;
+					linhasPassadas++;
+					yBola += espaco * linhasPassadas;
 				} else {
 					xBola += espaco;
 				}
-				//(*bola).setaPosicao();
 				bolas[i].setaPosicao(xBola, yBola);
 			} else {
 				bolas[i].setaPosicao(xOrigem, yOrigem);
@@ -414,45 +411,44 @@ void setaPosicaoVectorBola() {
 		}
 	}
 
-	void jogoBot() {
-		std::srand(std::time(NULL));
+	void jogoBot() { //jogada aleatória do robo
+		std::srand(std::time(NULL)); //define a semente como aleatória
 
-		bool escolheu;
+		bool escolheu; //Verdadeiro caso o bot tenha conseguido escolher a linha
 
-		do{
-		int linhaEscolhida = rand() % (linhasHorizontais.size()+linhasVerticais.size());
+		do {
+			int linhaEscolhida = rand() % (linhasHorizontais.size() + linhasVerticais.size()); //seleciona linha aleatória
 
-		if(linhaEscolhida<linhasHorizontais.size()){
-			if(linhasHorizontais[linhaEscolhida].clicarLinhaBot()){
-				escolheu=1;
-			}else{
-				escolheu=0;
+			if (linhaEscolhida < linhasHorizontais.size()) {
+				if (linhasHorizontais[linhaEscolhida].clicarLinhaBot()) {
+					escolheu = 1;
+				} else {
+					escolheu = 0;
+				}
+			} else if (linhaEscolhida >= linhasHorizontais.size()) {
+				linhaEscolhida -= linhasHorizontais.size();
+				if (linhasVerticais[linhaEscolhida].clicarLinhaBot()) {
+					escolheu = 1;
+				} else {
+					escolheu = 0;
+				}
 			}
-		}else if(linhaEscolhida>=linhasHorizontais.size()){
-			linhaEscolhida -= linhasVerticais.size();
-			if(linhasVerticais[linhaEscolhida].clicarLinhaBot()){
-				escolheu=1;
-			}else{
-				escolheu=0;
-			}
-		}
-		}while(!escolheu);
+		} while (!escolheu);
 		//cout << tipoLinha << endl;
 	}
 
-	bool fecharQuadrado(char quemJogou) {
-		int cont = -1;
-		bool retorno=0;
+	bool fecharQuadrado(char quemJogou) { //fecha um quadrado quando as linhas em sua volta s~~ao escolhidas
+		int linhasPassadas = 0;
+		bool retorno = 0; //retorno da função, Verdadeiro quando quadrado é fechado
 		for (int i = 0; i < quadrados.size(); i++) {
-
-			if (eMultiplo(i, 5)) {
-				cont++;
+			if (eMultiplo(i, 5) && i!=0) {
+				linhasPassadas++;
 			}
 
 			bool estaFechado = (linhasHorizontais[i].escolhido)
-					&& (linhasVerticais[i + cont].escolhido)
+					&& (linhasVerticais[i + linhasPassadas].escolhido)
 					&& (linhasHorizontais[i + 5].escolhido
-							&& linhasVerticais[i + 1 + cont].escolhido);
+							&& linhasVerticais[i + 1 + linhasPassadas].escolhido); //verifica se linahs ao redor estão escolhidas
 
 			if (estaFechado && !quadrados[i].fechado) {
 				if(quemJogou == 'p'){
@@ -472,7 +468,7 @@ void setaPosicaoVectorBola() {
 		return retorno;
 	}
 
-	void ganhou(){
+	void ganhou(){ //verifica se o jogador ganhou ou perdeu
 		if(jogador.pontos>bot.pontos){
 			cout << "Você Ganhou!!!" << endl;
 		}else{
@@ -480,7 +476,7 @@ void setaPosicaoVectorBola() {
 		}
 	}
 
-	bool fim(){
+	bool fim(){ //verifica se o jogo acabou
 		if((jogador.pontos+bot.pontos)==25){
 			cout << "Jogo Acabou!!!" << endl;
 			ganhou();
@@ -492,10 +488,9 @@ void setaPosicaoVectorBola() {
 
 };
 int main() {
-	setbuf(stdout, NULL);
-	Janela game(950, 720);
-	//std::cout << "Abriu" << std::endl;
+	setbuf(stdout, NULL); //zera buffer para que o console sempre abra
+	Janela jogo(950, 720); //cria janela do jogo
 
-	game.gameLoop();
+	jogo.gameLoop(); //inicia o loop do jogo
 	return 0;
 }
