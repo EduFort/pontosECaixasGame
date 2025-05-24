@@ -266,7 +266,7 @@ public:
 					}
 				}
 			}
-			for(int i=0; i<linhasHorizontais.size(); i++){
+			for(int i=0; i<linhasVerticais.size(); i++){
 				linhasVerticais[i].passarLinha(janela);
 				if(linhasVerticais[i].clicarLinha(janela)){
 					if(!fecharQuadrado('p') && !fim()){
@@ -404,6 +404,8 @@ void setaPosicaoVectorBola() {
 		int linhaAleatoria;
 		bool escolheu;
 
+
+
 		if (tipoLinha == 0) {
 			do {
 				linhaAleatoria = rand() % linhasHorizontais.size();
@@ -473,7 +475,7 @@ void setaPosicaoVectorBola() {
 int main() {
 	setbuf(stdout, NULL);
 	Janela game(950, 720);
-	std::cout << "Abriu" << std::endl;
+	//std::cout << "Abriu" << std::endl;
 
 	game.gameLoop();
 	return 0;

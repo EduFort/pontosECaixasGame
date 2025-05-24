@@ -16719,3 +16719,61 @@ g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\mai
    for (int i = 0; i < quadrados.size(); i++) {
                                       ^
 g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+09:42:28 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:1:29: fatal error: SFML/Graphics.hpp: No such file or directory
+ #include <SFML/Graphics.hpp>
+                             ^
+compilation terminated.
+09:43:46 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML-2.4.2\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In constructor 'Quadrado::Quadrado()':
+..\main.cpp:25:11: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+           ^~~~
+..\main.cpp:25:17: warning: narrowing conversion of '((Quadrado*)this)->Quadrado::lado' from 'int' to 'float' inside { } [-Wnarrowing]
+    tam = {lado, lado};
+                 ^~~~
+..\main.cpp: In member function 'void Janela::eventos()':
+..\main.cpp:258:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:269:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(int i=0; i<linhasHorizontais.size(); i++){
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::desenhar()':
+..\main.cpp:285:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp:288:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:291:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:294:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorQuadrado()':
+..\main.cpp:307:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < quadrados.size(); i++) {
+                  ~~^~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorLinhaHorizontal()':
+..\main.cpp:332:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasHorizontais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorVertical()':
+..\main.cpp:358:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < linhasVerticais.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In member function 'void Janela::setaPosicaoVectorBola()':
+..\main.cpp:383:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < bolas.size(); i++) {
+                   ~~^~~~~~~~~~~~~~
+..\main.cpp: In member function 'bool Janela::fecharQuadrado(char)':
+..\main.cpp:425:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < quadrados.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+g++ "-LC:\\SFML-2.4.2\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
