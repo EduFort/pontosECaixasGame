@@ -47,19 +47,19 @@ public:
 	sf::RectangleShape shape;
 	int posicaoX;
 	int posicaoY;
-	char direction;
+	char direcao;
 
 	bool ativo;
 	bool escolhido;
 
 	sf::Vector2f tam;
 
-	Linha(char rDirection) {
+	Linha(char rDirecao) {
 		shape.setFillColor(sf::Color(0, 0, 255, 50));
-		direction = rDirection;
-		if (direction == 'h') {
+		direcao = rDirecao;
+		if (direcao == 'h') {
 			tam = { 87, 12 };
-		} else if (direction == 'v') {
+		} else if (direcao == 'v') {
 			tam = { 12, 87 };
 		} else {
 			cout << "Error!!!" << endl;
@@ -70,6 +70,17 @@ public:
 		posicaoY = 0;
 		ativo = 0;
 		escolhido = 0;
+	}
+
+	Linha(int altura, int largura, int x, int y){
+		shape.setFillColor(sf::Color(0, 0, 0, 255));
+		tam={altura, largura};
+		shape.setSize(tam);
+		posicaoX = x;
+		posicaoY = y;
+		direcao='0';
+		ativo=0;
+		escolhido=0;
 	}
 
 	void setaPosicao(int x, int y) {
@@ -107,7 +118,7 @@ public:
 		if(!escolhido){
 			if(emCima(janela)){
 				if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-					setaCor(0, 0, 255, 255);
+					setaCor(0, 0, 255, 250);
 					escolhido=1;
 					return escolhido;
 				}
@@ -197,7 +208,7 @@ public:
 };
 
 //FunÃ§Ãµes
-bool isMult(int num, int mult) {
+bool eMultiplo(int num, int mult) {
 	if (num % mult == 0) {
 		return 1;
 	} else {
@@ -252,27 +263,32 @@ public:
 	}
 	void eventos() {
 		sf::Event event;
+		bool acabou=0;
 		while (janela.pollEvent(event)) {
 			if (event.type == sf::Event::Closed)
 				janela.close();
 			for(int i=0; i<linhasHorizontais.size(); i++){
 				linhasHorizontais[i].passarLinha(janela);
 				if(linhasHorizontais[i].clicarLinha(janela)){
-					if(!fecharQuadrado('p') && !fim()){
+					acabou = fim();
+					if(!fecharQuadrado('p') && !acabou){
 						do{
 							sf::sleep(sf::seconds(0.5));
 							jogoBot();
-						} while(fecharQuadrado('b') && !fim());
+							acabou = fim();
+						} while(fecharQuadrado('b') && !acabou);
 					}
 				}
 			}
 			for(int i=0; i<linhasVerticais.size(); i++){
 				linhasVerticais[i].passarLinha(janela);
 				if(linhasVerticais[i].clicarLinha(janela)){
+					acabou = fim();
 					if(!fecharQuadrado('p') && !fim()){
 						do{
 							sf::sleep(sf::seconds(0.5));
 							jogoBot();
+							acabou = fim();
 						} while(fecharQuadrado('b') && !fim());
 					}
 				}
@@ -306,7 +322,7 @@ public:
 	int yQuadrado = yOrigem;
 	for (int i = 0; i < quadrados.size(); i++) {
 		if (i != 0) {
-			if (isMult(i, 5)) {
+			if (eMultiplo(i, 5)) {
 				xQuadrado = xOrigem;
 				yQuadrado = yOrigem;
 				cont++;
@@ -331,7 +347,7 @@ void setaPosicaoVectorLinhaHorizontal() {
 		int mult = 5;
 		for (int i = 0; i < linhasHorizontais.size(); i++) {
 			if (i != 0) {
-				if (isMult(i, mult)) {
+				if (eMultiplo(i, mult)) {
 					xLinha = xOrigem;
 					yLinha = yOrigem;
 					cont++;
@@ -357,7 +373,7 @@ void setaPosicaoVectorVertical() {
 		int mult = 6;
 		for (int i = 0; i < linhasVerticais.size(); i++) {
 			if (i != 0) {
-				if (isMult(i, mult)) {
+				if (eMultiplo(i, mult)) {
 					xLinha = xOrigem;
 					yLinha = yOrigem;
 					cont++;
@@ -382,7 +398,7 @@ void setaPosicaoVectorBola() {
 		int yBola = yOrigem;
 		for (int i = 0; i < bolas.size(); i++) {
 			if (i != 0) {
-				if (isMult(i, 6)) {
+				if (eMultiplo(i, 6)) {
 					xBola = xOrigem;
 					yBola = yOrigem;
 					cont++;
@@ -400,24 +416,27 @@ void setaPosicaoVectorBola() {
 
 	void jogoBot() {
 		std::srand(std::time(NULL));
-		int tipoLinha = rand() % 2;
-		int linhaAleatoria;
+
 		bool escolheu;
 
+		do{
+		int linhaEscolhida = rand() % (linhasHorizontais.size()+linhasVerticais.size());
 
-
-		if (tipoLinha == 0) {
-			do {
-				linhaAleatoria = rand() % linhasHorizontais.size();
-				escolheu = linhasHorizontais[linhaAleatoria].clicarLinhaBot();
-			} while (!escolheu);
-		} else {
-			do {
-				linhaAleatoria = rand() % linhasVerticais.size();
-				escolheu = linhasVerticais[linhaAleatoria].clicarLinhaBot();
-			} while (!escolheu);
+		if(linhaEscolhida<linhasHorizontais.size()){
+			if(linhasHorizontais[linhaEscolhida].clicarLinhaBot()){
+				escolheu=1;
+			}else{
+				escolheu=0;
+			}
+		}else if(linhaEscolhida>=linhasHorizontais.size()){
+			linhaEscolhida -= linhasVerticais.size();
+			if(linhasVerticais[linhaEscolhida].clicarLinhaBot()){
+				escolheu=1;
+			}else{
+				escolheu=0;
+			}
 		}
-
+		}while(!escolheu);
 		//cout << tipoLinha << endl;
 	}
 
@@ -426,7 +445,7 @@ void setaPosicaoVectorBola() {
 		bool retorno=0;
 		for (int i = 0; i < quadrados.size(); i++) {
 
-			if (isMult(i, 5)) {
+			if (eMultiplo(i, 5)) {
 				cont++;
 			}
 
@@ -455,7 +474,7 @@ void setaPosicaoVectorBola() {
 
 	void ganhou(){
 		if(jogador.pontos>bot.pontos){
-			cout << "Voc~e Ganhou!!!" << endl;
+			cout << "Você Ganhou!!!" << endl;
 		}else{
 			cout << "Você Perdeu!!!" << endl;
 		}
@@ -463,7 +482,7 @@ void setaPosicaoVectorBola() {
 
 	bool fim(){
 		if((jogador.pontos+bot.pontos)==25){
-			cout << "Voce ganhou!!!" << endl;
+			cout << "Jogo Acabou!!!" << endl;
 			ganhou();
 			return 1;
 		}else{

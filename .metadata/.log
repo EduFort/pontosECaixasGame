@@ -3991,3 +3991,23 @@ java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2025-05-24 09:58:03.505 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2025-05-24 09:58:13.301
+!MESSAGE Missing superclass "gnu.asm.option.debugging.level" for "gnu.asm.option.debugging.level.1006444955"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2025-05-24 09:58:13.754
+!MESSAGE Missing superclass "gnu.asm.option.debugging.level" for "gnu.asm.option.debugging.level.1206437439"
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-24 09:58:15.379
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\eburi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
