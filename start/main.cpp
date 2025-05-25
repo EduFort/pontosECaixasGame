@@ -195,7 +195,7 @@ public:
 		posicaoX=x;
 		posicaoY=y;
 		setaPosicao(posicaoX, posicaoY);
-		tam = {200, 100};
+		tam = {243, 93};
 		shape.setSize(tam);
 	}
 
@@ -315,16 +315,15 @@ public:
 	void menu() {
 	    estaNoMenu = 1;
 	    sf::RectangleShape nomeJogo;
-	    Botao botaoIniciar(40, 400);
+	    Botao botaoIniciar(499, 345);
+	    Botao botaoFechar(499, 467);
 
-	    sf::Vector2f tamanhoMensagem(500, 300);
-	    nomeJogo.setSize(tamanhoMensagem);
-	    nomeJogo.setPosition(400, 0);
-	    nomeJogo.setFillColor(sf::Color::Red);
+	    botaoIniciar.setaCor(0, 0, 0, 0);
+	    botaoFechar.setaCor(0, 0, 0, 0);
 
 	    // agr vai
 	    sf::Texture texturaFundo;
-	    if (!texturaFundo.loadFromFile("imagens/Fundo4.png")) {
+	    if (!texturaFundo.loadFromFile("imagens/Fundo1.png")) {
 	        std::cerr << "Erro ao carregar imagem de fundo\n";
 	        return;
 	    }
@@ -348,12 +347,15 @@ public:
 	            gameLoop();
 	        }
 
+	        if (botaoFechar.clicarBotao(janela)){
+	        	janela.close();
+	        }
+
 	        janela.clear();
 
 	        janela.draw(spriteFundo);             // Fundo com imagem
-	        janela.draw(nomeJogo);                // Nome do jogo
 	        janela.draw(botaoIniciar.shape);      // Botão
-
+	        janela.draw(botaoFechar.shape);
 	        janela.display();
 	    }
 	}
@@ -431,7 +433,7 @@ public:
 
 	void desenhar() { //desenha os elementos na tela
 		janela.clear(sf::Color::Black); // fundo preto
-		if(!estaNoMenu){
+		if(!estaNoMenu && !acabou){
 			for (int i = 0; i < quadrados.size(); i++) {
 				janela.draw(quadrados[i].shape);
 			}
