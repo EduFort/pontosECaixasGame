@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.ZipFile"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
 		<section name="ImportExportWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="426"/>
 			<item key="DIALOG_Y_ORIGIN" value="8"/>
@@ -10,5 +14,12 @@
 		</section>
 	</section>
 	<section name="ZipFileExportWizard">
+	</section>
+	<section name="ZipFileImportWizard">
+		<item key="WizardZipFileResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
+		<list key="WizardZipFileResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\eburi\Desktop\Imagens.zip"/>
+			<item value="C:\Users\eburi\Desktop\Imagens (2).zip"/>
+		</list>
 	</section>
 </section>

@@ -312,29 +312,52 @@ public:
 		janela.setFramerateLimit(limiteQuadros);
 	}
 
-	void menu(){
-		estaNoMenu=1;
-		sf::RectangleShape nomeJogo;
-		Botao botaoIniciar(40, 400);
+	void menu() {
+	    estaNoMenu = 1;
+	    sf::RectangleShape nomeJogo;
+	    Botao botaoIniciar(40, 400);
 
-		sf::Vector2f  tamanhoMensagem(500, 300);
-		nomeJogo.setSize(tamanhoMensagem);
-		nomeJogo.setPosition(400, 0);
-		nomeJogo.setFillColor(sf::Color::Red);
+	    sf::Vector2f tamanhoMensagem(500, 300);
+	    nomeJogo.setSize(tamanhoMensagem);
+	    nomeJogo.setPosition(400, 0);
+	    nomeJogo.setFillColor(sf::Color::Red);
 
-		while (janela.isOpen()){
-			if(botaoIniciar.clicarBotao(janela)){
-				gameLoop();
-			}
+	    // agr vai
+	    sf::Texture texturaFundo;
+	    if (!texturaFundo.loadFromFile("imagens/Fundo4.png")) {
+	        std::cerr << "Erro ao carregar imagem de fundo\n";
+	        return;
+	    }
+	    sf::Sprite spriteFundo;
+	    spriteFundo.setTexture(texturaFundo);
 
-			janela.clear(sf::Color::Black); // fundo preto
+	    sf::Vector2u tamanhoImagem = texturaFundo.getSize();
+	       float escalaX = 947.0f / tamanhoImagem.x;
+	       float escalaY = 720.0f / tamanhoImagem.y;
+	       spriteFundo.setScale(escalaX, escalaY);
 
-			janela.draw(nomeJogo);
-			janela.draw(botaoIniciar.shape);
 
-			janela.display();
-		}
+	    while (janela.isOpen()) {
+	        sf::Event evento;
+	        while (janela.pollEvent(evento)) {
+	            if (evento.type == sf::Event::Closed)
+	                janela.close();
+	        }
+
+	        if (botaoIniciar.clicarBotao(janela)) {
+	            gameLoop();
+	        }
+
+	        janela.clear();
+
+	        janela.draw(spriteFundo);             // Fundo com imagem
+	        janela.draw(nomeJogo);                // Nome do jogo
+	        janela.draw(botaoIniciar.shape);      // Botão
+
+	        janela.display();
+	    }
 	}
+
 
 	void gameLoop() { //loop onde aocntece as etapas do jogo
 		estaNoMenu=0;
@@ -618,5 +641,10 @@ int main() {
 	Janela jogo(950, 720); //cria janela do jogo
 
 	jogo.menu(); //inicia o loop do jogo
+
+
+
+
+
 	return 0;
 }
