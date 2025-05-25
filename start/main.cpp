@@ -5,7 +5,9 @@
 #include <ctime>
 
 using namespace std;
+
 //Classes
+
 class Quadrado{ //Classes dos quadrados formados entre linhas e pontos
 public:
 	sf::RectangleShape shape;
@@ -40,7 +42,7 @@ public:
 		}
 };
 
-class Linha {
+class Linha { //Classe das linhas clicaveis do jogo
 public:
 	sf::RectangleShape shape;
 	int posicaoX; //coordanadas do quadrado
@@ -179,6 +181,68 @@ public:
 
 };
 
+class Botao{ //Classes dos botões em geral
+public:
+	sf::RectangleShape shape;
+
+	int posicaoX;
+	int posicaoY;
+
+	sf::Vector2f tam;
+
+	Botao(int x, int y) {
+		setaCor(255, 255, 0, 200);
+		posicaoX=x;
+		posicaoY=y;
+		setaPosicao(posicaoX, posicaoY);
+		tam = {200, 100};
+		shape.setSize(tam);
+	}
+
+
+	void setaPosicao(int x, int y) { //seta nova posição
+		posicaoX = x;
+		posicaoY = y;
+		shape.setPosition(x, y);
+	}
+
+	void setaTamanho(float largura, float altura){
+		tam={largura, altura};
+		shape.setSize(tam);
+	}
+
+	void setaCor(int r, int g, int b, int a) { //seta nova cor
+		shape.setFillColor(sf::Color(r, g, b, a));
+	}
+
+	bool emCima(sf::RenderWindow& janela){ //verifica se mouse está em cima da linha
+		sf::Vector2i posicao = sf::Mouse::getPosition(janela);
+		int x = posicao.x; //posições x y do mouse
+		int y = posicao.y;
+
+		bool emCima = (x > posicaoX) && (x < posicaoX+tam.x) && (y > posicaoY) && (y < posicaoY+tam.y);
+		return  emCima;
+	}
+
+	bool clicarBotao(sf::RenderWindow& janela) { //ativa evento quando clicada
+		if(emCima(janela)){
+			if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+				return 1;
+			}
+		}
+		return 0;
+	}
+
+
+	int pegaX() { //retorno posição x
+		return posicaoX;
+	}
+
+	int pegaY() { //retorno posição y
+		return posicaoY;
+	}
+};
+
 class Jogador{ //classe dos jogadores da partida
 public:
 	string nome; //nome do jogador
@@ -188,6 +252,10 @@ public:
 	Jogador(string rNome) { //inicializa as variáveis da classee
 		nome = rNome;
 		pontos = 0;
+	}
+
+	void restart(){
+		pontos=0;
 	}
 
 	void adicionaPonto(){ //adiciona um ponto ao jogador
@@ -223,23 +291,57 @@ public:
 	Jogador jogador; //jogadores do jogo
 	Jogador bot;
 
+	bool estaNoMenu;
+	bool acabou;
+
+	sf::RectangleShape mensagemFim;
+	Botao botaoReiniciar;
+	Botao botaoVoltarMenu;
+
 	vector<Quadrado> quadrados; //vetores dos elementos visuais
 	vector<Linha> linhasHorizontais;
 	vector<Linha> linhasVerticais;
 	vector<Bola> bolas;
 
-	Janela(int rLargura, int rAltura) : janela(sf::VideoMode(rLargura, rAltura), "Pontos e Caixas"), jogador("Player"), bot("Bot"){ //inicializa as variáveis da classe e objetos da classe
+	Janela(int rLargura, int rAltura) : janela(sf::VideoMode(rLargura, rAltura), "Pontos e Caixas"), jogador("Player"), bot("Bot"), botaoReiniciar(300, 200), botaoVoltarMenu(0, 600){ //inicializa as variáveis da classe e objetos da classe
 		largura = rLargura;
 		altura = rAltura;
 		limiteQuadros = 100;
+		estaNoMenu=0;
+		acabou=0;
 		janela.setFramerateLimit(limiteQuadros);
 	}
 
+	void menu(){
+		estaNoMenu=1;
+		sf::RectangleShape nomeJogo;
+		Botao botaoIniciar(40, 400);
+
+		sf::Vector2f  tamanhoMensagem(500, 300);
+		nomeJogo.setSize(tamanhoMensagem);
+		nomeJogo.setPosition(400, 0);
+		nomeJogo.setFillColor(sf::Color::Red);
+
+		while (janela.isOpen()){
+			if(botaoIniciar.clicarBotao(janela)){
+				gameLoop();
+			}
+
+			janela.clear(sf::Color::Black); // fundo preto
+
+			janela.draw(nomeJogo);
+			janela.draw(botaoIniciar.shape);
+
+			janela.display();
+		}
+	}
+
 	void gameLoop() { //loop onde aocntece as etapas do jogo
+		estaNoMenu=0;
 		carregar(); //carrega os elementos visuais
 		while (janela.isOpen()) {
 			eventos(); //eventos do jogo
-			desenhar(); //desenha os elementos visuais
+			desenhar (); //desenha os elementos visuais
 		}
 	}
 
@@ -249,6 +351,10 @@ public:
 		linhasVerticais = vector<Linha>(30, Linha('v'));
 		bolas = vector<Bola>(36);
 
+		jogador.restart();
+		bot.restart();
+		acabou=0;
+
 		setaPosicaoVectorQuadrado(); //coloca os elementos do vetor em suas posições
 		setaPosicaoVectorLinhaHorizontal();
 		setaPosicaoVectorVertical();
@@ -257,7 +363,6 @@ public:
 
 	void eventos() { //verifica possíveis ações do jogo
 		sf::Event event;
-		bool acabou=0;
 		bool fechou=0;
 		while (janela.pollEvent(event)) {
 			if (event.type == sf::Event::Closed)
@@ -266,28 +371,36 @@ public:
 				linhasHorizontais[i].passarLinha(janela); //primeiro para linhas horizontais
 				if(linhasHorizontais[i].clicarLinha(janela)){
 					fechou = fecharQuadrado('p');
-					acabou = fim();
+					fim();
 					if(!fechou && !acabou){
 						do{
-							sf::sleep(sf::seconds(0.5));
+							sf::sleep(sf::seconds(1));
 							jogoBot();
 							fechou = fecharQuadrado('b');
-							acabou = fim();
+							fim();
 						} while(fechou && !acabou);
 					}
 				}
 				linhasVerticais[i].passarLinha(janela); //depois para verticais
 				if(linhasVerticais[i].clicarLinha(janela)){
 					fechou = fecharQuadrado('p');
-					acabou = fim();
+					fim();
 					if(!fechou && !acabou){
 						do{
 							sf::sleep(sf::seconds(0.5));
 							jogoBot();
 							fechou = fecharQuadrado('b');
-							acabou = fim();
+							fim();
 						} while(fechou && !acabou);
 					}
+				}
+			}
+			if(botaoVoltarMenu.clicarBotao(janela)){
+				menu();
+			}
+			if(acabou){
+				if(botaoReiniciar.clicarBotao(janela)){
+					carregar();
 				}
 			}
 		}
@@ -295,18 +408,30 @@ public:
 
 	void desenhar() { //desenha os elementos na tela
 		janela.clear(sf::Color::Black); // fundo preto
-		for (int i = 0; i < quadrados.size(); i++) {
-			janela.draw(quadrados[i].shape);
+		if(!estaNoMenu){
+			for (int i = 0; i < quadrados.size(); i++) {
+				janela.draw(quadrados[i].shape);
+			}
+			for (int i = 0; i < linhasHorizontais.size(); i++) { //linhas e bolas
+				janela.draw(linhasHorizontais[i].shape);
+			}
+			for (int i = 0; i < linhasVerticais.size(); i++) {
+				janela.draw(linhasVerticais[i].shape);
+			}
+			for (int i = 0; i < bolas.size(); i++) {
+				janela.draw(bolas[i].shape);
+			 }
+			janela.draw(botaoVoltarMenu.shape);
 		}
-		for (int i = 0; i < linhasHorizontais.size(); i++) { //linhas e bolas
-			janela.draw(linhasHorizontais[i].shape);
+
+		if(acabou){
+			sf::Vector2f  tamanhoMensagem(500, 300);
+			mensagemFim.setSize(tamanhoMensagem);
+			mensagemFim.setPosition(400, 0);
+			mensagemFim.setFillColor(sf::Color::Black);
+			janela.draw(mensagemFim);
+			janela.draw(botaoReiniciar.shape);
 		}
-		for (int i = 0; i < linhasVerticais.size(); i++) {
-			janela.draw(linhasVerticais[i].shape);
-		}
-		for (int i = 0; i < bolas.size(); i++) {
-			janela.draw(bolas[i].shape);
-		 }
 		janela.display();
 	}
 
@@ -476,21 +601,22 @@ void setaPosicaoVectorBola() {
 		}
 	}
 
-	bool fim(){ //verifica se o jogo acabou
+	void fim(){ //verifica se o jogo acabou
 		if((jogador.pontos+bot.pontos)==25){
 			cout << "Jogo Acabou!!!" << endl;
 			ganhou();
-			return 1;
+			acabou = 1;
 		}else{
-			return 0;
+			acabou = 0;
 		}
 	}
 
 };
+
 int main() {
 	setbuf(stdout, NULL); //zera buffer para que o console sempre abra
 	Janela jogo(950, 720); //cria janela do jogo
 
-	jogo.gameLoop(); //inicia o loop do jogo
+	jogo.menu(); //inicia o loop do jogo
 	return 0;
 }
