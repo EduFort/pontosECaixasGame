@@ -705,7 +705,6 @@ void setaPosicaoVectorBola() {
 			acabou = 0;
 		}
 	}
-
 };
 
 int main() {
@@ -714,10 +713,6 @@ int main() {
 	Janela jogo(950, 720); //cria janela do jogo
 
 	jogo.menu(); //inicia o loop do jogo
-
-
-
-
 
 	return 0;
 }
