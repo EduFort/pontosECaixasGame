@@ -1,6 +1,8 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <iostream>
 #include <vector>
+#include <sstream>
 #include <cstdio>
 #include <ctime>
 
@@ -45,6 +47,7 @@ public:
 class Linha { //Classe das linhas clicaveis do jogo
 public:
 	sf::RectangleShape shape;
+
 	int posicaoX; //coordanadas do quadrado
 	int posicaoY;
 
@@ -56,7 +59,7 @@ public:
 	sf::Vector2f tam;  // vetor com as medidas do quadrado
 
 	Linha(char rDirecao) { //inicializa as variáveis da classe
-		shape.setFillColor(sf::Color(0, 0, 255, 50));
+		shape.setFillColor(sf::Color(231, 109, 94, 50));
 		direcao = rDirecao;
 		if (direcao == 'h') {
 			tam = { 87, 12 };
@@ -66,6 +69,7 @@ public:
 			cout << "Error!!!" << endl;
 			exit(1);
 		}
+
 		shape.setSize(tam);
 		posicaoX = 0;
 		posicaoY = 0;
@@ -106,10 +110,10 @@ public:
 	void passarLinha(sf::RenderWindow &janela) { //ativa a linha (muda a cor) quando o mouse está em cima
 		if (!escolhido) {
 			if (emCima(janela)) {
-				setaCor(0, 0, 255, 255);
+				setaCor(231, 109, 94, 255);
 				ativo = 1;
 			} else if (ativo && !emCima(janela)) {
-				setaCor(0, 0, 255, 50);
+				setaCor(231, 109, 94, 50);
 				ativo = 0;
 			}
 		}
@@ -119,7 +123,7 @@ public:
 		if(!escolhido){
 			if(emCima(janela)){
 				if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-					setaCor(0, 0, 255, 250);
+					setaCor(231, 109, 94, 255);
 					escolhido=1;
 					return escolhido;
 				}
@@ -130,7 +134,7 @@ public:
 
 	bool clicarLinhaBot() { //clique de linha feito pelo bot
 		if(!escolhido){
-			setaCor(255, 0, 0, 255);
+			setaCor(59, 12, 5, 255);
 			escolhido = 1;
 			return 1;
 		}
@@ -191,11 +195,11 @@ public:
 	sf::Vector2f tam;
 
 	Botao(int x, int y) {
-		setaCor(255, 255, 0, 200);
+		setaCor(255, 255, 0, 0);
 		posicaoX=x;
 		posicaoY=y;
 		setaPosicao(posicaoX, posicaoY);
-		tam = {200, 100};
+		tam = {235, 93};
 		shape.setSize(tam);
 	}
 
@@ -260,12 +264,8 @@ public:
 
 	void adicionaPonto(){ //adiciona um ponto ao jogador
 		pontos++;
-		imprimePonto();
 	}
 
-	void imprimePonto(){ //mostra os pontos do jogador
-		cout << nome << ": " << pontos << endl;
-	}
 
 };
 
@@ -283,6 +283,21 @@ bool eMultiplo(int num, int mult) { //verifica se um numero é multiplo do outro
 class Janela { //janela do jogo
 public:
 	sf::RenderWindow janela;
+
+	sf::Image icone;
+	sf::Music musica;
+
+	sf::SoundBuffer buffer;
+	sf::Sound efeito;
+
+	sf::Sprite spriteFundo;
+	sf::Texture texturaFundo;
+
+	sf::Font fonte;
+
+	sf::Text textoPontosJogador;
+	sf::Text textoPontosBot;
+
 	int largura; //tamanho da janela
 	int altura;
 
@@ -303,40 +318,62 @@ public:
 	vector<Linha> linhasVerticais;
 	vector<Bola> bolas;
 
-	Janela(int rLargura, int rAltura) : janela(sf::VideoMode(rLargura, rAltura), "Pontos e Caixas"), jogador("Player"), bot("Bot"), botaoReiniciar(300, 200), botaoVoltarMenu(0, 600){ //inicializa as variáveis da classe e objetos da classe
+	Janela(int rLargura, int rAltura) : janela(sf::VideoMode(rLargura, rAltura), "Pontos e Caixas"), jogador("Player"), bot("Bot"), botaoReiniciar(60, 530), botaoVoltarMenu(18, 588){ //inicializa as variáveis da classe e objetos da classe
 		largura = rLargura;
 		altura = rAltura;
 		limiteQuadros = 100;
 		estaNoMenu=0;
 		acabou=0;
+
+		botaoVoltarMenu.setaTamanho(130, 113);
+		botaoReiniciar.setaTamanho(140, 140);
+		botaoVoltarMenu.setaCor(0, 0, 0, 0);
+
+		icone.loadFromFile("imagens/icone.png");
+		janela.setIcon(icone.getSize().x, icone.getSize().y, icone.getPixelsPtr());
+
 		janela.setFramerateLimit(limiteQuadros);
 	}
 
-	void menu(){
-		estaNoMenu=1;
-		sf::RectangleShape nomeJogo;
-		Botao botaoIniciar(40, 400);
+	void menu() {
+	    estaNoMenu = 1;
+	    musica.stop();
+	    sf::RectangleShape nomeJogo;
+	    Botao botaoIniciar(313, 483);
+	    Botao botaoFechar(623, 483);
 
-		sf::Vector2f  tamanhoMensagem(500, 300);
-		nomeJogo.setSize(tamanhoMensagem);
-		nomeJogo.setPosition(400, 0);
-		nomeJogo.setFillColor(sf::Color::Red);
+	    botaoIniciar.setaCor(0, 200, 0, 0);
+	    botaoFechar.setaCor(0, 200, 0, 0);
 
-		while (janela.isOpen()){
-			if(botaoIniciar.clicarBotao(janela)){
-				gameLoop();
-			}
+	    // agr vai
+	    carregaFundo("imagens/telaInicial.png");
 
-			janela.clear(sf::Color::Black); // fundo preto
+	    while (janela.isOpen()) {
+	        sf::Event evento;
+	        while (janela.pollEvent(evento)) {
+	            if (evento.type == sf::Event::Closed)
+	                janela.close();
+	        }
 
-			janela.draw(nomeJogo);
-			janela.draw(botaoIniciar.shape);
+	        if (botaoIniciar.clicarBotao(janela)) {
+	            loopJogo();
+	        }
 
-			janela.display();
-		}
+	        if (botaoFechar.clicarBotao(janela)){
+	        	janela.close();
+	        }
+
+	        janela.clear();
+
+	        janela.draw(spriteFundo);             // Fundo com imagem
+	        janela.draw(botaoIniciar.shape);      // Botão
+	        janela.draw(botaoFechar.shape);
+	        janela.display();
+	    }
 	}
 
-	void gameLoop() { //loop onde aocntece as etapas do jogo
+
+	void loopJogo() { //loop onde aocntece as etapas do jogo
 		estaNoMenu=0;
 		carregar(); //carrega os elementos visuais
 		while (janela.isOpen()) {
@@ -346,6 +383,10 @@ public:
 	}
 
 	void carregar() { //carrega os elementos visuais
+		carregaFundo("imagens/telaGame.png");
+		carregaMusica();
+		carregaTexto();
+
 		quadrados = vector<Quadrado>(25);
 		linhasHorizontais = vector<Linha>(30, Linha('h'));
 		linhasVerticais = vector<Linha>(30, Linha('v'));
@@ -370,6 +411,7 @@ public:
 			for(int i=0; i<linhasHorizontais.size(); i++){
 				linhasHorizontais[i].passarLinha(janela); //primeiro para linhas horizontais
 				if(linhasHorizontais[i].clicarLinha(janela)){
+					efeito.play();
 					fechou = fecharQuadrado('p');
 					fim();
 					if(!fechou && !acabou){
@@ -377,12 +419,14 @@ public:
 							sf::sleep(sf::seconds(1));
 							jogoBot();
 							fechou = fecharQuadrado('b');
+							desenhar();
 							fim();
 						} while(fechou && !acabou);
 					}
 				}
 				linhasVerticais[i].passarLinha(janela); //depois para verticais
 				if(linhasVerticais[i].clicarLinha(janela)){
+					efeito.play();
 					fechou = fecharQuadrado('p');
 					fim();
 					if(!fechou && !acabou){
@@ -390,6 +434,7 @@ public:
 							sf::sleep(sf::seconds(0.5));
 							jogoBot();
 							fechou = fecharQuadrado('b');
+							desenhar();
 							fim();
 						} while(fechou && !acabou);
 					}
@@ -407,8 +452,9 @@ public:
 	}
 
 	void desenhar() { //desenha os elementos na tela
-		janela.clear(sf::Color::Black); // fundo preto
-		if(!estaNoMenu){
+		janela.clear(); // fundo preto
+		if(!estaNoMenu && !acabou){
+			janela.draw(spriteFundo);
 			for (int i = 0; i < quadrados.size(); i++) {
 				janela.draw(quadrados[i].shape);
 			}
@@ -421,18 +467,63 @@ public:
 			for (int i = 0; i < bolas.size(); i++) {
 				janela.draw(bolas[i].shape);
 			 }
+			janela.draw(textoPontosJogador);
+			janela.draw(textoPontosBot);
 			janela.draw(botaoVoltarMenu.shape);
 		}
 
 		if(acabou){
-			sf::Vector2f  tamanhoMensagem(500, 300);
-			mensagemFim.setSize(tamanhoMensagem);
-			mensagemFim.setPosition(400, 0);
-			mensagemFim.setFillColor(sf::Color::Black);
-			janela.draw(mensagemFim);
+			janela.draw(spriteFundo);
 			janela.draw(botaoReiniciar.shape);
 		}
 		janela.display();
+	}
+
+	void carregaFundo(string arquivo){
+		if(texturaFundo.loadFromFile(arquivo)) {
+		    sf::Vector2u tamanhoImagem = texturaFundo.getSize();
+		    float escalaX = 947.0f / tamanhoImagem.x;
+		    float escalaY = 720.0f / tamanhoImagem.y;
+		    spriteFundo.setScale(escalaX, escalaY);
+			spriteFundo.setTexture(texturaFundo);
+		}else{
+			std::cerr << "Erro ao carregar imagem de fundo\n";
+			exit(3);
+		}
+	}
+
+	void carregaMusica(){
+	    if (musica.openFromFile("sons/trilhaSonora.ogg")) {
+	    	musica.setVolume(30);
+		    musica.setLoop(true);
+		    musica.play();
+			buffer.loadFromFile("sons/efeito.wav");
+			efeito.setBuffer(buffer);
+			efeito.setVolume(40);
+	    }else{
+	        std::cout << "Erro ao carregar música\n";
+	        exit(4);
+	    }
+	}
+
+	void carregaTexto(){
+
+		fonte.loadFromFile("fonte/fonte.ttf");
+
+		textoPontosJogador.setFont(fonte);
+		textoPontosBot.setFont(fonte);
+
+		textoPontosJogador.setCharacterSize(40);
+		textoPontosBot.setCharacterSize(40);
+
+		textoPontosJogador.setColor(sf::Color::Black);
+		textoPontosBot.setColor(sf::Color::Black);
+
+		textoPontosJogador.setString("0");
+		textoPontosBot.setString("0");
+
+		textoPontosJogador.setPosition(210, 30);
+		textoPontosBot.setPosition(705, 30);
 	}
 
 	void setaPosicaoVectorQuadrado() {
@@ -537,7 +628,6 @@ void setaPosicaoVectorBola() {
 	}
 
 	void jogoBot() { //jogada aleatória do robo
-		std::srand(std::time(NULL)); //define a semente como aleatória
 
 		bool escolheu; //Verdadeiro caso o bot tenha conseguido escolher a linha
 
@@ -577,13 +667,19 @@ void setaPosicaoVectorBola() {
 
 			if (estaFechado && !quadrados[i].fechado) {
 				if(quemJogou == 'p'){
-					quadrados[i].setaCor(0, 0, 255, 200);
+					quadrados[i].setaCor(231, 109, 94, 200);
 					quadrados[i].fechar();
 					jogador.adicionaPonto();
+					stringstream textoPontos;
+					textoPontos << jogador.pontos;
+					textoPontosJogador.setString(textoPontos.str());
 				}else if(quemJogou == 'b'){
-					quadrados[i].setaCor(255, 0, 0, 200);
+					quadrados[i].setaCor(59, 12, 5, 200);
 					quadrados[i].fechar();
 					bot.adicionaPonto();
+					stringstream textoPontos;
+					textoPontos << bot.pontos;
+					textoPontosBot.setString(textoPontos.str());
 				}else{
 					exit(2);
 				}
@@ -595,15 +691,14 @@ void setaPosicaoVectorBola() {
 
 	void ganhou(){ //verifica se o jogador ganhou ou perdeu
 		if(jogador.pontos>bot.pontos){
-			cout << "Você Ganhou!!!" << endl;
+			carregaFundo("imagens/vitoria.png");
 		}else{
-			cout << "Você Perdeu!!!" << endl;
+			carregaFundo("imagens/derrota.png");
 		}
 	}
 
 	void fim(){ //verifica se o jogo acabou
 		if((jogador.pontos+bot.pontos)==25){
-			cout << "Jogo Acabou!!!" << endl;
 			ganhou();
 			acabou = 1;
 		}else{
@@ -615,8 +710,14 @@ void setaPosicaoVectorBola() {
 
 int main() {
 	setbuf(stdout, NULL); //zera buffer para que o console sempre abra
+	std::srand(std::time(NULL)); //define a semente como aleatória
 	Janela jogo(950, 720); //cria janela do jogo
 
 	jogo.menu(); //inicia o loop do jogo
+
+
+
+
+
 	return 0;
 }
