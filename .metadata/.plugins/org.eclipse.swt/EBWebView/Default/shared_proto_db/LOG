@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
 2025/05/24-21:17:50.602 cc8 Reusing MANIFEST C:\Users\EduMa\OneDrive\Eduardo\CEFET\LP1\projetosEclipse\pontosECaixasGame\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db/MANIFEST-000001
 2025/05/24-21:17:50.603 cc8 Recovering log #3
 2025/05/24-21:17:50.604 cc8 Reusing old log C:\Users\EduMa\OneDrive\Eduardo\CEFET\LP1\projetosEclipse\pontosECaixasGame\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db/000003.log 
+=======
+2025/05/25-21:48:47.831 5338 Reusing MANIFEST C:\Users\EduMa\OneDrive\Eduardo\CEFET\LP1\projetosEclipse\pontosECaixasGame\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db/MANIFEST-000001
+2025/05/25-21:48:47.833 5338 Recovering log #3
+2025/05/25-21:48:47.834 5338 Reusing old log C:\Users\EduMa\OneDrive\Eduardo\CEFET\LP1\projetosEclipse\pontosECaixasGame\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db/000003.log 
+>>>>>>> Stashed changes

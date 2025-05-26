@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
 2025/05/24-21:17:50.494 5448 Reusing MANIFEST C:\Users\EduMa\OneDrive\Eduardo\CEFET\LP1\projetosEclipse\pontosECaixasGame\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB/MANIFEST-000001
 2025/05/24-21:17:50.495 5448 Recovering log #3
 2025/05/24-21:17:50.496 5448 Reusing old log C:\Users\EduMa\OneDrive\Eduardo\CEFET\LP1\projetosEclipse\pontosECaixasGame\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB/000003.log 
+=======
+2025/05/25-21:48:47.595 256c Reusing MANIFEST C:\Users\EduMa\OneDrive\Eduardo\CEFET\LP1\projetosEclipse\pontosECaixasGame\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB/MANIFEST-000001
+2025/05/25-21:48:47.606 256c Recovering log #3
+2025/05/25-21:48:47.608 256c Reusing old log C:\Users\EduMa\OneDrive\Eduardo\CEFET\LP1\projetosEclipse\pontosECaixasGame\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB/000003.log 
+>>>>>>> Stashed changes
