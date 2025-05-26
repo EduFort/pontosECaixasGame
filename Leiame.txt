@@ -1,0 +1,1 @@
+Para copilar e rodar o programa, é necessário que seu computador tenha tanto uma pasta C:\MinGW32 e uma C:\SFML em seu computador, depois disso, abra a pasta do projeto pelo eclipse, salve o código, copile e rode, o jogo já estará funcionando.
