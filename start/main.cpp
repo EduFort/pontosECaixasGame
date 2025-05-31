@@ -6,285 +6,17 @@
 #include <cstdio>
 #include <ctime>
 
+#include "elementos.hpp"
+
 using namespace std;
 
-//Classes
-
-class Quadrado{ //Classes dos quadrados formados entre linhas e pontos
-public:
-	sf::RectangleShape shape;
-		int posicaoX; //coordanadas do quadrado
-		int posicaoY;
-
-		bool fechado; //Verdadeiro quando as linhas em volta são selecionadas
-		sf::Vector2f tam; // vetor com as medidas do quadrado
-
-		Quadrado() { //inicializa as variáveis da classe
-			posicaoX=0;
-			posicaoY=0;
-			fechado=0;
-
-			tam = {95, 95};
-			shape.setSize(tam);
-			setaCor(100, 250, 100, 0);
-		}
-
-		void setaPosicao(int x, int y) { //seta nova posição
-			posicaoX = x;
-			posicaoY = y;
-			shape.setPosition(x, y);
-		}
-
-		void setaCor(int r, int g, int b, int a) { //seta nova cor
-			shape.setFillColor(sf::Color(r, g, b, a));
-		}
-
-		void fechar(){ //marca quadrado como fechado
-			fechado=1;
-		}
-};
-
-class Linha { //Classe das linhas clicaveis do jogo
-public:
-	sf::RectangleShape shape;
-
-	int posicaoX; //coordanadas do quadrado
-	int posicaoY;
-
-	char direcao; //direção da linha
-
-	bool ativo; //Verdadeiro se o mouse está em cima da linha
-	bool escolhido; //Verdadeiro se a linha foi clicada
-
-	sf::Vector2f tam;  // vetor com as medidas do quadrado
-
-	Linha(char rDirecao) { //inicializa as variáveis da classe
-		shape.setFillColor(sf::Color(231, 109, 94, 50));
-		direcao = rDirecao;
-		if (direcao == 'h') {
-			tam = { 87, 12 };
-		} else if (direcao == 'v') {
-			tam = { 12, 87 };
-		} else {
-			cout << "Error!!!" << endl;
-			exit(1);
-		}
-
-		shape.setSize(tam);
-		posicaoX = 0;
-		posicaoY = 0;
-		ativo = 0;
-		escolhido = 0;
-	}
-
-	Linha(int altura, int largura, int x, int y){ //Inicializa uso da classe para fins estéticos
-		shape.setFillColor(sf::Color(0, 0, 0, 255));
-		tam={altura, largura};
-		shape.setSize(tam);
-		posicaoX = x;
-		posicaoY = y;
-		direcao='0';
-		ativo=0;
-		escolhido=0;
-	}
-
-	void setaPosicao(int x, int y) { //seta nova posição
-		posicaoX = x;
-		posicaoY = y;
-		shape.setPosition(x, y);
-	}
-
-	void setaCor(int r, int g, int b, int a) { //seta nova cor
-		shape.setFillColor(sf::Color(r, g, b, a));
-	}
-
-	bool emCima(sf::RenderWindow& janela){ //verifica se mouse está em cima da linha
-		sf::Vector2i posicao = sf::Mouse::getPosition(janela);
-		int x = posicao.x; //posições x y do mouse
-		int y = posicao.y;
-
-		bool emCima = (x > posicaoX) && (x < posicaoX+tam.x) && (y > posicaoY) && (y < posicaoY+tam.y);
-		return  emCima;
-	}
-
-	void passarLinha(sf::RenderWindow &janela) { //ativa a linha (muda a cor) quando o mouse está em cima
-		if (!escolhido) {
-			if (emCima(janela)) {
-				setaCor(231, 109, 94, 255);
-				ativo = 1;
-			} else if (ativo && !emCima(janela)) {
-				setaCor(231, 109, 94, 50);
-				ativo = 0;
-			}
-		}
-	}
-
-	bool clicarLinha(sf::RenderWindow& janela){ //ve se a linha foi clicada, e caso sim a ativa quando a linha é clicada
-		if(!escolhido){
-			if(emCima(janela)){
-				if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-					setaCor(231, 109, 94, 255);
-					escolhido=1;
-					return escolhido;
-				}
-			}
-		}
-		return 0;
-	}
-
-	bool clicarLinhaBot() { //clique de linha feito pelo bot
-		if(!escolhido){
-			setaCor(59, 12, 5, 255);
-			escolhido = 1;
-			return 1;
-		}
-		return 0;
-	}
-
-	int pegaX() { //retorno posição x
-		return posicaoX;
-	}
-
-	int pegaY() { //retorno posição y
-		return posicaoY;
-	}
-
-};
-
-class Bola { //classe das bolas que aparecem na tela
-public:
-	sf::CircleShape shape;
-	int posicaoX; //posições x e y da bola
-	int posicaoY;
-
-	int radius; //raio e tamanho do círculo
-	int tam;
-
-	Bola() { //inicializa as variáveis da classee
-		shape.setFillColor(sf::Color::White);
-		radius = 10;
-		tam = radius * 2;
-		shape.setRadius(radius);
-		posicaoX = 0;
-		posicaoY = 0;
-	}
-
-	void setaPosicao(int x, int y) { //seta nova posição da bola
-		posicaoX = x;
-		posicaoY = y;
-		shape.setPosition(x, y);
-	}
-
-	int pegaX() { //retorno posição x
-		return posicaoX;
-	}
-
-	int pegaY() { //retorno posição y
-		return posicaoY;
-	}
-
-};
-
-class Botao{ //Classes dos botões em geral
-public:
-	sf::RectangleShape shape;
-
-	int posicaoX;
-	int posicaoY;
-
-	sf::Vector2f tam;
-
-	Botao(int x, int y) {
-		setaCor(255, 255, 0, 0);
-		posicaoX=x;
-		posicaoY=y;
-		setaPosicao(posicaoX, posicaoY);
-		tam = {235, 93};
-		shape.setSize(tam);
-	}
-
-
-	void setaPosicao(int x, int y) { //seta nova posição
-		posicaoX = x;
-		posicaoY = y;
-		shape.setPosition(x, y);
-	}
-
-	void setaTamanho(float largura, float altura){
-		tam={largura, altura};
-		shape.setSize(tam);
-	}
-
-	void setaCor(int r, int g, int b, int a) { //seta nova cor
-		shape.setFillColor(sf::Color(r, g, b, a));
-	}
-
-	bool emCima(sf::RenderWindow& janela){ //verifica se mouse está em cima da linha
-		sf::Vector2i posicao = sf::Mouse::getPosition(janela);
-		int x = posicao.x; //posições x y do mouse
-		int y = posicao.y;
-
-		bool emCima = (x > posicaoX) && (x < posicaoX+tam.x) && (y > posicaoY) && (y < posicaoY+tam.y);
-		return  emCima;
-	}
-
-	bool clicarBotao(sf::RenderWindow& janela) { //ativa evento quando clicada
-		if(emCima(janela)){
-			if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-				return 1;
-			}
-		}
-		return 0;
-	}
-
-
-	int pegaX() { //retorno posição x
-		return posicaoX;
-	}
-
-	int pegaY() { //retorno posição y
-		return posicaoY;
-	}
-};
-
-class Jogador{ //classe dos jogadores da partida
-public:
-	string nome; //nome do jogador
-
-	int pontos; //quantidade de pontos
-
-	Jogador(string rNome) { //inicializa as variáveis da classee
-		nome = rNome;
-		pontos = 0;
-	}
-
-	void restart(){
-		pontos=0;
-	}
-
-	void adicionaPonto(){ //adiciona um ponto ao jogador
-		pontos++;
-	}
-
-
-};
-
-//FunÃ§Ãµes
-bool eMultiplo(int num, int mult) { //verifica se um numero é multiplo do outro
-	if (num % mult == 0) {
-		return 1;
-	} else {
-		return 0;
-	}
-}
-
-/*********************************funÃ§Ã£o jogo*********************************/
+/*********************************funçao do jogo*********************************/
 
 class Janela { //janela do jogo
 public:
 	sf::RenderWindow janela;
 
-	sf::Image icone;
+	sf::Image icone; //elementos SFML da janela
 	sf::Music musica;
 
 	sf::SoundBuffer buffer;
@@ -318,7 +50,7 @@ public:
 	vector<Linha> linhasVerticais;
 	vector<Bola> bolas;
 
-	Janela(int rLargura, int rAltura) : janela(sf::VideoMode(rLargura, rAltura), "Pontos e Caixas"), jogador("Player"), bot("Bot"), botaoReiniciar(60, 530), botaoVoltarMenu(18, 588){ //inicializa as variáveis da classe e objetos da classe
+	Janela(int rLargura, int rAltura) : janela(sf::VideoMode(rLargura, rAltura), "Pontos e Caixas"), jogador("Player"), bot("Bot"), botaoReiniciar(60, 530), botaoVoltarMenu(18, 588){ //inicializa as variaveis da classe e objetos da classe
 		largura = rLargura;
 		altura = rAltura;
 		limiteQuadros = 100;
@@ -335,20 +67,16 @@ public:
 		janela.setFramerateLimit(limiteQuadros);
 	}
 
-	void menu() {
+	void menu() { //funcao responsavel
 	    estaNoMenu = 1;
 	    musica.stop();
 	    sf::RectangleShape nomeJogo;
-	    Botao botaoIniciar(313, 483);
+	    Botao botaoIniciar(313, 483); //coloca os botoes
 	    Botao botaoFechar(623, 483);
 
-	    botaoIniciar.setaCor(0, 200, 0, 0);
-	    botaoFechar.setaCor(0, 200, 0, 0);
+	    carregaFundo("imagens/telaInicial.png"); //carrega imagem de fundo
 
-	    // agr vai
-	    carregaFundo("imagens/telaInicial.png");
-
-	    while (janela.isOpen()) {
+	    while (janela.isOpen()) { //eventos do menu
 	        sf::Event evento;
 	        while (janela.pollEvent(evento)) {
 	            if (evento.type == sf::Event::Closed)
@@ -365,9 +93,9 @@ public:
 
 	        janela.clear();
 
-	        janela.draw(spriteFundo);             // Fundo com imagem
-	        janela.draw(botaoIniciar.shape);      // Botão
-	        janela.draw(botaoFechar.shape);
+	        janela.draw(spriteFundo);             // Fundo da imagem
+	        janela.draw(botaoIniciar.shape);      // Botao para comecar jogo
+	        janela.draw(botaoFechar.shape);		  // Botao para fechar jogo
 	        janela.display();
 	    }
 	}
@@ -387,7 +115,7 @@ public:
 		carregaMusica();
 		carregaTexto();
 
-		quadrados = vector<Quadrado>(25);
+		quadrados = vector<Quadrado>(25); //inicializa os vectores
 		linhasHorizontais = vector<Linha>(30, Linha('h'));
 		linhasVerticais = vector<Linha>(30, Linha('v'));
 		bolas = vector<Bola>(36);
@@ -402,24 +130,24 @@ public:
 		setaPosicaoVectorBola();
 	}
 
-	void eventos() { //verifica possíveis ações do jogo
+	void eventos() { //verifica possiveis ações do jogo
 		sf::Event event;
 		bool fechou=0;
 		while (janela.pollEvent(event)) {
 			if (event.type == sf::Event::Closed)
 				janela.close();
-			for(int i=0; i<linhasHorizontais.size(); i++){
-				linhasHorizontais[i].passarLinha(janela); //primeiro para linhas horizontais
-				if(linhasHorizontais[i].clicarLinha(janela)){
+			for(unsigned i=0; i<linhasHorizontais.size(); i++){ //primeiro para linhas horizontais
+				linhasHorizontais[i].passarLinha(janela); //ve se o mouse passou na linha
+				if(linhasHorizontais[i].clicarLinha(janela)){ //se a linha foi clicada
 					efeito.play();
-					fechou = fecharQuadrado('p');
-					fim();
+					fechou = fecharQuadrado('p'); //verifica de quadrado foi fechado
+					fim(); //verifica se o jogo deve acabar
 					if(!fechou && !acabou){
-						do{
+						do{ //jogadas do bot
 							sf::sleep(sf::seconds(1));
 							jogoBot();
 							fechou = fecharQuadrado('b');
-							desenhar();
+							desenhar(); //desenha jogada do bot
 							fim();
 						} while(fechou && !acabou);
 					}
@@ -440,11 +168,11 @@ public:
 					}
 				}
 			}
-			if(botaoVoltarMenu.clicarBotao(janela)){
+			if(botaoVoltarMenu.clicarBotao(janela)){ //botao de voltar menu
 				menu();
 			}
 			if(acabou){
-				if(botaoReiniciar.clicarBotao(janela)){
+				if(botaoReiniciar.clicarBotao(janela)){ //botao de reiniciar que aparece após o fim do jogo
 					carregar();
 				}
 			}
@@ -452,19 +180,19 @@ public:
 	}
 
 	void desenhar() { //desenha os elementos na tela
-		janela.clear(); // fundo preto
+		janela.clear();
 		if(!estaNoMenu && !acabou){
 			janela.draw(spriteFundo);
-			for (int i = 0; i < quadrados.size(); i++) {
+			for (unsigned i = 0; i < quadrados.size(); i++) {
 				janela.draw(quadrados[i].shape);
 			}
-			for (int i = 0; i < linhasHorizontais.size(); i++) { //linhas e bolas
+			for (unsigned i = 0; i < linhasHorizontais.size(); i++) { //linhas e bolas
 				janela.draw(linhasHorizontais[i].shape);
 			}
-			for (int i = 0; i < linhasVerticais.size(); i++) {
+			for (unsigned i = 0; i < linhasVerticais.size(); i++) {
 				janela.draw(linhasVerticais[i].shape);
 			}
-			for (int i = 0; i < bolas.size(); i++) {
+			for (unsigned i = 0; i < bolas.size(); i++) {
 				janela.draw(bolas[i].shape);
 			 }
 			janela.draw(textoPontosJogador);
@@ -472,14 +200,14 @@ public:
 			janela.draw(botaoVoltarMenu.shape);
 		}
 
-		if(acabou){
+		if(acabou){ //tela final
 			janela.draw(spriteFundo);
 			janela.draw(botaoReiniciar.shape);
 		}
 		janela.display();
 	}
 
-	void carregaFundo(string arquivo){
+	void carregaFundo(string arquivo){ //carrega fundo do jogo
 		if(texturaFundo.loadFromFile(arquivo)) {
 		    sf::Vector2u tamanhoImagem = texturaFundo.getSize();
 		    float escalaX = 947.0f / tamanhoImagem.x;
@@ -501,7 +229,7 @@ public:
 			efeito.setBuffer(buffer);
 			efeito.setVolume(40);
 	    }else{
-	        std::cout << "Erro ao carregar música\n";
+	        std::cout << "Erro ao carregar mÃºsica\n";
 	        exit(4);
 	    }
 	}
@@ -534,7 +262,7 @@ public:
 		int xQuadrado = xOrigem;
 		int yQuadrado = yOrigem;
 		int quadradosPorLinha=5;
-		for (int i = 0; i < quadrados.size(); i++) {
+		for (unsigned i = 0; i < quadrados.size(); i++) {
 			if (i != 0) {
 				if (eMultiplo(i, quadradosPorLinha)) {
 					xQuadrado = xOrigem;
@@ -559,7 +287,7 @@ void setaPosicaoVectorLinhaHorizontal() {
 		int xLinha = xOrigem;
 		int yLinha = yOrigem;
 		int linhasHorizontaisPorLinha = 5;
-		for (int i = 0; i < linhasHorizontais.size(); i++) {
+		for (unsigned i = 0; i < linhasHorizontais.size(); i++) {
 			if (i != 0) {
 				if (eMultiplo(i, linhasHorizontaisPorLinha)) {
 					xLinha = xOrigem;
@@ -585,7 +313,7 @@ void setaPosicaoVectorVertical() {
 		int xLinha = xOrigem;
 		int yLinha = yOrigem;
 		int linhasverticaisPorLinha = 6;
-		for (int i = 0; i < linhasVerticais.size(); i++) {
+		for (unsigned i = 0; i < linhasVerticais.size(); i++) {
 			if (i != 0) {
 				if (eMultiplo(i, linhasverticaisPorLinha)) {
 					xLinha = xOrigem;
@@ -610,7 +338,7 @@ void setaPosicaoVectorBola() {
 		int xBola = xOrigem;
 		int yBola = yOrigem;
 		int bolasPorLinha =6;
-		for (int i = 0; i < bolas.size(); i++) {
+		for (unsigned i = 0; i < bolas.size(); i++) {
 			if (i != 0) {
 				if (eMultiplo(i, bolasPorLinha)) {
 					xBola = xOrigem;
@@ -627,12 +355,12 @@ void setaPosicaoVectorBola() {
 		}
 	}
 
-	void jogoBot() { //jogada aleatória do robo
+	void jogoBot() { //jogada aleatoria do robo/bot
 
 		bool escolheu; //Verdadeiro caso o bot tenha conseguido escolher a linha
 
 		do {
-			int linhaEscolhida = rand() % (linhasHorizontais.size() + linhasVerticais.size()); //seleciona linha aleatória
+			unsigned linhaEscolhida = rand() % (linhasHorizontais.size() + linhasVerticais.size()); //seleciona linha aleatÃ³ria
 
 			if (linhaEscolhida < linhasHorizontais.size()) {
 				if (linhasHorizontais[linhaEscolhida].clicarLinhaBot()) {
@@ -649,13 +377,12 @@ void setaPosicaoVectorBola() {
 				}
 			}
 		} while (!escolheu);
-		//cout << tipoLinha << endl;
 	}
 
 	bool fecharQuadrado(char quemJogou) { //fecha um quadrado quando as linhas em sua volta s~~ao escolhidas
 		int linhasPassadas = 0;
-		bool retorno = 0; //retorno da função, Verdadeiro quando quadrado é fechado
-		for (int i = 0; i < quadrados.size(); i++) {
+		bool retorno = 0; //retorno da funcao, Verdadeiro quando quadrado sao fechado
+		for (unsigned i = 0; i < quadrados.size(); i++) {
 			if (eMultiplo(i, 5) && i!=0) {
 				linhasPassadas++;
 			}
@@ -663,7 +390,7 @@ void setaPosicaoVectorBola() {
 			bool estaFechado = (linhasHorizontais[i].escolhido)
 					&& (linhasVerticais[i + linhasPassadas].escolhido)
 					&& (linhasHorizontais[i + 5].escolhido
-							&& linhasVerticais[i + 1 + linhasPassadas].escolhido); //verifica se linahs ao redor estão escolhidas
+							&& linhasVerticais[i + 1 + linhasPassadas].escolhido); //verifica se linahs ao redor estÃ£o escolhidas
 
 			if (estaFechado && !quadrados[i].fechado) {
 				if(quemJogou == 'p'){
@@ -709,7 +436,7 @@ void setaPosicaoVectorBola() {
 
 int main() {
 	setbuf(stdout, NULL); //zera buffer para que o console sempre abra
-	std::srand(std::time(NULL)); //define a semente como aleatória
+	std::srand(std::time(NULL)); //define a semente como aleatoria
 	Janela jogo(950, 720); //cria janela do jogo
 
 	jogo.menu(); //inicia o loop do jogo

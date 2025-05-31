@@ -22358,3 +22358,51 @@ g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\mai
    for (int i = 0; i < quadrados.size(); i++) {
                                       ^
 g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
+10:39:50 **** Incremental Build of configuration Debug for project start ****
+Info: Internal Builder is used for build
+g++ "-IC:\\SFML\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from ..\main.cpp:9:0:
+..\elementos.hpp: In constructor 'Quadrado::Quadrado()':
+..\elementos.hpp:20:17: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = {95, 95};
+                 ^
+..\elementos.hpp:20:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = {95, 95};
+        ^
+..\elementos.hpp: In constructor 'Linha::Linha(char)':
+..\elementos.hpp:58:19: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 87, 12 };
+                   ^
+..\elementos.hpp:58:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 87, 12 };
+        ^
+..\elementos.hpp:60:19: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 87 };
+                   ^
+..\elementos.hpp:60:8: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+    tam = { 12, 87 };
+        ^
+..\elementos.hpp: In constructor 'Linha::Linha(int, int, int, int)':
+..\elementos.hpp:75:23: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   tam={altura, largura};
+                       ^
+..\elementos.hpp:75:6: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   tam={altura, largura};
+      ^
+..\elementos.hpp:75:6: warning: narrowing conversion of 'altura' from 'int' to 'float' inside { } is ill-formed in C++11 [-Wnarrowing]
+..\elementos.hpp:75:6: warning: narrowing conversion of 'largura' from 'int' to 'float' inside { } is ill-formed in C++11 [-Wnarrowing]
+..\elementos.hpp: In constructor 'Botao::Botao(int, int)':
+..\elementos.hpp:195:17: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   tam = {235, 93};
+                 ^
+..\elementos.hpp:195:7: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   tam = {235, 93};
+       ^
+..\elementos.hpp: In member function 'void Botao::setaTamanho(float, float)':
+..\elementos.hpp:207:23: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   tam={largura, altura};
+                       ^
+..\elementos.hpp:207:6: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   tam={largura, altura};
+      ^
+g++ "-LC:\\SFML\\lib" -o start.exe main.o -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
